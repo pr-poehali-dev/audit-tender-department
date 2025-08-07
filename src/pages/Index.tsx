@@ -647,9 +647,9 @@ export default function Index() {
               <Icon name="FileCheck" className="h-6 w-6 text-primary mr-2" />
               <span className="text-white font-semibold">TenderAudit</span>
             </div>
-            <div className="text-gray-400 text-sm">
-              © 2024 TenderAudit. Все права защищены.
-            </div>
+            <div className="text-gray-400 text-sm">© ИП Авилов С.П.
+ОГРНИП324784700271894
+ Все права защищены.</div>
           </div>
         </div>
       </footer>
