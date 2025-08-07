@@ -605,9 +605,7 @@ export default function Index() {
                   <Icon name="Phone" className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-white">Телефон</CardTitle>
-                <CardDescription className="text-gray-300">
-                  +7 (495) 123-45-67
-                </CardDescription>
+                <CardDescription className="text-gray-300">+7 (911) 709-05-57</CardDescription>
               </CardHeader>
             </Card>
 
@@ -617,9 +615,7 @@ export default function Index() {
                   <Icon name="Mail" className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-white">Email</CardTitle>
-                <CardDescription className="text-gray-300">
-                  info@tenderaudit.ru
-                </CardDescription>
+                <CardDescription className="text-gray-300">ipavilovsp@yandex.ru</CardDescription>
               </CardHeader>
             </Card>
 
