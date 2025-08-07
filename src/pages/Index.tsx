@@ -625,9 +625,7 @@ export default function Index() {
                   <Icon name="MapPin" className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-white">Адрес</CardTitle>
-                <CardDescription className="text-gray-300">
-                  г. Москва, ул. Деловая, д. 15
-                </CardDescription>
+                <CardDescription className="text-gray-300">г. Санкт-Петербург</CardDescription>
               </CardHeader>
             </Card>
           </div>
