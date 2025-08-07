@@ -28,7 +28,7 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-400">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Профессиональный аудит
@@ -117,7 +117,7 @@ export default function Index() {
             <div className="space-y-6">
               <Card className="border-none shadow-lg">
                 <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
+                  <div className="flex items-center space-x-3 mb-4 bg-gray-300">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                       <Icon name="Zap" className="h-5 w-5 text-primary" />
                     </div>
@@ -145,7 +145,7 @@ export default function Index() {
 
               <Card className="border-none shadow-lg">
                 <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
+                  <div className="flex items-center space-x-3 mb-4 bg-slate-300">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                       <Icon name="Users" className="h-5 w-5 text-primary" />
                     </div>
@@ -176,7 +176,7 @@ export default function Index() {
             <div className="space-y-6">
               <Card className="border-none shadow-lg">
                 <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
+                  <div className="flex items-center space-x-3 mb-4 bg-slate-300">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                       <Icon name="Target" className="h-5 w-5 text-primary" />
                     </div>
@@ -204,7 +204,7 @@ export default function Index() {
 
               <Card className="border-none shadow-lg">
                 <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
+                  <div className="flex items-center space-x-3 mb-4 bg-slate-300">
                     <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                       <Icon name="BarChart3" className="h-5 w-5 text-primary" />
                     </div>
@@ -233,7 +233,7 @@ export default function Index() {
           </div>
 
           {/* Performance Metrics */}
-          <div className="mt-12 bg-white rounded-xl p-8 shadow-lg">
+          <div className="mt-12 rounded-xl p-8 shadow-lg bg-slate-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
               Ключевые показатели эффективности после оптимизации
             </h3>
@@ -414,7 +414,7 @@ export default function Index() {
           </div>
 
           {/* Investigation Process */}
-          <div className="bg-gray-50 rounded-xl p-8">
+          <div className="rounded-xl p-8 bg-slate-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
               Процесс проведения расследования
             </h3>
