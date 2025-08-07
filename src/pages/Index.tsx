@@ -458,7 +458,7 @@ export default function Index() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Аудит системы управления</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Анализ системы управления тендерными документами с фокусом на ключевые аспекты
+              Анализ системы управления тендерным отделом с фокусом на ключевые аспекты
             </p>
           </div>
 
