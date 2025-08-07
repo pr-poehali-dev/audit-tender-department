@@ -100,6 +100,177 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Performance Recommendations Section */}
+      <section className="py-16 bg-gradient-to-r from-primary/5 to-secondary/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Рекомендации по увеличению производительности
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Проверенные методы оптимизации работы тендерного отдела для повышения эффективности на 40-60%
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Left Column - Process Optimization */}
+            <div className="space-y-6">
+              <Card className="border-none shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Icon name="Zap" className="h-5 w-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">Автоматизация процессов</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Внедрение системы управления документами (DMS)</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Автоматизация создания типовых документов</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Интеграция с электронными торговыми площадками</span>
+                  </div>
+                  <div className="p-3 bg-primary/5 rounded-lg">
+                    <div className="text-sm font-medium text-primary">Результат: сокращение времени на 45%</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Icon name="Users" className="h-5 w-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">Развитие персонала</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Обучение современным методам работы с тендерами</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Сертификация по управлению закупками</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Внедрение системы мотивации и KPI</span>
+                  </div>
+                  <div className="p-3 bg-secondary/5 rounded-lg">
+                    <div className="text-sm font-medium text-secondary">Результат: повышение квалификации на 35%</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Right Column - Strategic Optimization */}
+            <div className="space-y-6">
+              <Card className="border-none shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Icon name="Target" className="h-5 w-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">Стратегическое планирование</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Создание базы данных потенциальных тендеров</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Анализ конкурентов и рыночных трендов</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Разработка долгосрочной стратегии участия</span>
+                  </div>
+                  <div className="p-3 bg-primary/5 rounded-lg">
+                    <div className="text-sm font-medium text-primary">Результат: увеличение выигрышей на 25%</div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-lg">
+                <CardHeader>
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Icon name="BarChart3" className="h-5 w-5 text-primary" />
+                    </div>
+                    <CardTitle className="text-lg">Контроль и аналитика</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Внедрение системы отчетности и мониторинга</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Анализ эффективности участия в тендерах</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600 text-sm">Оптимизация бюджета на участие в закупках</span>
+                  </div>
+                  <div className="p-3 bg-secondary/5 rounded-lg">
+                    <div className="text-sm font-medium text-secondary">Результат: ROI увеличивается на 40%</div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Performance Metrics */}
+          <div className="mt-12 bg-white rounded-xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              Ключевые показатели эффективности после оптимизации
+            </h3>
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Clock" className="h-8 w-8 text-primary" />
+                </div>
+                <div className="text-3xl font-bold text-primary mb-2">-45%</div>
+                <div className="text-gray-600">Время подготовки документов</div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Trophy" className="h-8 w-8 text-primary" />
+                </div>
+                <div className="text-3xl font-bold text-primary mb-2">+25%</div>
+                <div className="text-gray-600">Выигранных тендеров</div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="DollarSign" className="h-8 w-8 text-primary" />
+                </div>
+                <div className="text-3xl font-bold text-primary mb-2">+40%</div>
+                <div className="text-gray-600">ROI от участия</div>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="CheckCircle" className="h-8 w-8 text-primary" />
+                </div>
+                <div className="text-3xl font-bold text-primary mb-2">95%</div>
+                <div className="text-gray-600">Качество документов</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Audit Section */}
       <section id="audit" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
