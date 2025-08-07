@@ -35,7 +35,7 @@ export default function Index() {
             <span className="text-primary block">тендерного отдела</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Комплексный анализ системы управления тендерными документами для повышения эффективности закупочных процессов
+            Комплексный анализ системы управления тендерным отделом для повышения эффективности закупочных процессов
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-primary hover:bg-primary/90">
