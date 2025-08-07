@@ -594,7 +594,7 @@ export default function Index() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Свяжитесь с нами</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Готовы начать аудит вашего тендерного отдела? Свяжитесь с нами для получения консультации
+              Готовы начать аудит Вашего тендерного отдела? Свяжитесь с нами для получения консультации
             </p>
           </div>
 
