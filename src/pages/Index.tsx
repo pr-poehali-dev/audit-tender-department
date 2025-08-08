@@ -50,6 +50,47 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Founder Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/3">
+              <img
+                src="img/5cbc60ab-eff7-4a22-99b7-6dd7184bcde4.jpg"
+                alt="Авилов С.П."
+                className="w-80 h-80 object-cover rounded-2xl shadow-2xl mx-auto"
+              />
+            </div>
+            <div className="lg:w-2/3">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Авилов Сергей Павлович
+              </h2>
+              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                <span className="text-primary font-semibold">Эксперт по государственным закупкам</span> с 15-летним опытом
+              </p>
+              <blockquote className="text-lg text-gray-600 italic leading-relaxed mb-8 border-l-4 border-primary pl-6">
+                "Государственные закупки — это не просто процедуры и документы. Это инструмент развития экономики, 
+                создания справедливой конкуренции и эффективного использования бюджетных средств. За каждой тендерной 
+                процедурой стоят люди, их потребности и будущее нашего общества. 
+                
+                Моя миссия — помочь организациям построить прозрачную и эффективную систему закупок, которая служит 
+                общественным интересам и способствует устойчивому развитию бизнеса."
+              </blockquote>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                  <Icon name="Calendar" className="mr-2 h-5 w-5" />
+                  Записаться на консультацию
+                </Button>
+                <Button variant="outline" size="lg">
+                  <Icon name="FileText" className="mr-2 h-5 w-5" />
+                  Скачать портфолио
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
