@@ -12,7 +12,7 @@ export default function Index() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Icon name="FileCheck" className="h-8 w-8 text-primary mr-3" />
-              <span className="text-xl font-semibold text-gray-900">TenderAudit</span>
+              <span className="text-xl font-semibold text-gray-900">ИП Авилов С.П.</span>
             </div>
             <div className="hidden md:block">
               <div className="flex items-baseline space-x-4">
