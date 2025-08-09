@@ -56,7 +56,7 @@ export default function Index() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/3">
               <img
-                src="img/429a0dce-2150-4f8c-a2ae-7c7a37160f3a.jpg"
+                src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
                 alt="Авилов С.П."
                 className="w-80 h-80 object-cover rounded-2xl shadow-2xl mx-auto"
               />
