@@ -58,7 +58,7 @@ export default function Index() {
               <img
                 src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
                 alt="Авилов С.П."
-                className="w-80 h-80 rounded-2xl shadow-2xl mx-auto object-contain"
+                className="w-80 h-80 shadow-2xl mx-auto object-contain rounded-sm"
               />
             </div>
             <div className="lg:w-2/3">
