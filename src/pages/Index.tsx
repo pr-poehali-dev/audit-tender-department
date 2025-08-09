@@ -53,7 +53,7 @@ export default function Index() {
       {/* Founder Section */}
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+          <div className="flex flex-col lg:flex-row-reverse items-start gap-12">
             <div className="lg:w-1/3 relative">
               <div className="relative mx-auto w-60 h-60">
                 {/* Background decoration */}
@@ -77,7 +77,7 @@ export default function Index() {
                 <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-blue-600 rounded-full shadow-lg"></div>
               </div>
             </div>
-            <div className="lg:w-2/3">
+            <div className="lg:w-2/3 lg:mt-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Авилов Станислав Петрович
               </h2>
