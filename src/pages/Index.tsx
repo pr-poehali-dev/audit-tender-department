@@ -53,7 +53,7 @@ export default function Index() {
       {/* Founder Section */}
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
             <div className="lg:w-1/3 relative">
               <div className="relative mx-auto w-60 h-60">
                 {/* Background decoration */}
