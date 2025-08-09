@@ -63,7 +63,7 @@ export default function Index() {
             </div>
             <div className="lg:w-2/3">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Авилов Сергей Павлович
+                Авилов Станислав Петрович
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 <span className="text-primary font-semibold">Эксперт по государственным закупкам</span> с 15-летним опытом
