@@ -54,12 +54,28 @@ export default function Index() {
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/3">
-              <img
-                src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
-                alt="Авилов С.П."
-                className="w-80 h-80 object-cover rounded-2xl shadow-2xl mx-auto"
-              />
+            <div className="lg:w-1/3 relative">
+              <div className="relative mx-auto w-80 h-80">
+                {/* Background decoration */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-2xl transform rotate-3"></div>
+                <div className="absolute inset-0 bg-gradient-to-tl from-indigo-500/10 to-primary/10 rounded-2xl transform -rotate-2"></div>
+                
+                {/* Main photo container */}
+                <div className="relative bg-white p-2 rounded-2xl shadow-2xl">
+                  <img
+                    src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
+                    alt="Авилов Станислав Петрович"
+                    className="w-full h-full object-cover rounded-xl grayscale-0 hover:grayscale-0 transition-all duration-300"
+                  />
+                  
+                  {/* Professional overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-xl opacity-40"></div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-primary rounded-full shadow-lg"></div>
+                <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-blue-600 rounded-full shadow-lg"></div>
+              </div>
             </div>
             <div className="lg:w-2/3">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
