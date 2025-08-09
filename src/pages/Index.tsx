@@ -55,7 +55,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/3 relative">
-              <div className="relative mx-auto w-80 h-80">
+              <div className="relative mx-auto w-60 h-60">
                 {/* Background decoration */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-600/20 rounded-2xl transform rotate-3"></div>
                 <div className="absolute inset-0 bg-gradient-to-tl from-indigo-500/10 to-primary/10 rounded-2xl transform -rotate-2"></div>
