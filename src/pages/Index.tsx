@@ -69,7 +69,7 @@ export default function Index() {
                   />
                   
                   {/* Professional overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-xl opacity-40"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-40 rounded-sm"></div>
                 </div>
                 
                 {/* Decorative elements */}
