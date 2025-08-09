@@ -66,7 +66,7 @@ export default function Index() {
                 Авилов Станислав Петрович
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                <span className="text-primary font-semibold">Эксперт по государственным закупкам</span> с 15-летним опытом
+                <span className="text-primary font-semibold">Эксперт по государственным закупкам</span> с 6-летним опытом
               </p>
               <blockquote className="text-lg text-gray-600 italic leading-relaxed mb-8 border-l-4 border-primary pl-6">
                 "Государственные закупки — это не просто процедуры и документы. Это инструмент развития экономики, 
