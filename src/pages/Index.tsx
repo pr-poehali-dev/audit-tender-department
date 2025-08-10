@@ -83,12 +83,6 @@ export default function Index() {
                     <div className="absolute -inset-1 bg-gradient-to-r from-gold/30 via-transparent to-gold/30 rounded-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-700 -z-10 blur-sm"></div>
                   </div>
                 </div>
-                  
-                  {/* Luxury Badge */}
-                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 gold-gradient px-4 py-1 rounded-full text-black text-xs font-bold tracking-wider shadow-lg">
-                    EXPERT
-                  </div>
-                </div>
                 
                 {/* Floating Elements */}
                 <div className="absolute -top-6 -left-6 w-12 h-12 gold-gradient rounded-full opacity-20 animate-float blur-sm"></div>
