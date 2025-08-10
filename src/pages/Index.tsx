@@ -718,7 +718,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
-              <Icon name="FileCheck" className="h-6 w-6 text-primary mr-2" />
+              <img 
+                src="/img/3288d581-fe6d-4184-94a4-5fd9b20dcf73.jpg" 
+                alt="Tender Audit Heraldry" 
+                className="h-6 w-6 mr-2 object-contain" 
+              />
               <span className="text-white font-semibold">TenderAudit</span>
             </div>
             <div className="text-gray-400 text-sm">© ИП Авилов С.П.
