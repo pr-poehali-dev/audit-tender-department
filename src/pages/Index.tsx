@@ -75,7 +75,7 @@ export default function Index() {
                 Станислав Авилов
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                <span className="text-primary-600 font-semibold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">Эксперт по государственным закупкам</span> с 15-летним опытом
+                <span className="text-primary-600 font-semibold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">Эксперт с многолетним опытом управления тендерным отделом со стороны Поставщика</span>
               </p>
               <blockquote className="text-lg text-gray-600 italic leading-relaxed mb-8 border-l-4 border-gradient-to-b from-primary-500 to-accent-500 pl-6 bg-white/50 backdrop-blur-sm rounded-r-lg p-6 shadow-soft">
                 "Государственные закупки — это не просто процедуры и документы. Это инструмент развития экономики, 
