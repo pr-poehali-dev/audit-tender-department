@@ -651,7 +651,11 @@ export default function Index() {
                   <Icon name="Phone" className="h-6 w-6 text-primary" />
                 </div>
                 <CardTitle className="text-white">Телефон</CardTitle>
-                <CardDescription className="text-gray-300">+7 (911) 709-05-57</CardDescription>
+                <CardDescription className="text-gray-300">
+                  <a href="tel:+79117090557" className="hover:text-primary transition-colors">
+                    +7 (911) 709-05-57
+                  </a>
+                </CardDescription>
               </CardHeader>
             </Card>
 
