@@ -44,7 +44,7 @@ export default function Index() {
               <Icon name="FileText" className="mr-2 h-5 w-5" />
               Заказать аудит
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <Icon name="Phone" className="mr-2 h-5 w-5" />
               Консультация
             </Button>
