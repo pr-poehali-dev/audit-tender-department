@@ -90,7 +90,7 @@ export default function Index() {
               </div>
             </div>
             <div className="lg:w-2/3 animate-slide-up">
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-white mb-6 font-thin text-xl">
                 Станислав Авилов
               </h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
