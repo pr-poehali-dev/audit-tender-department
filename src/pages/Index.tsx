@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import PremiumTestimonial from "@/components/PremiumTestimonial";
 
 export default function Index() {
   return (
@@ -32,23 +33,23 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8 bg-hero-gradient relative overflow-hidden">
+      <section id="home" className="py-24 px-4 sm:px-6 lg:px-8 luxury-gradient relative overflow-hidden min-h-[90vh] flex items-center">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="absolute top-20 left-1/4 w-32 h-32 bg-white/20 rounded-full blur-xl animate-float"></div>
           <div className="absolute top-40 right-1/3 w-24 h-24 bg-pink-300/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-700 mb-6 animate-slide-up drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 animate-slide-up drop-shadow-2xl leading-tight">
             Профессиональный аудит
-            <span className="text-gray-500 block">тендерного отдела</span>
+            <span className="text-gold block font-display">тендерного отдела</span>
           </h1>
-          <p className="text-xl text-black mb-8 max-w-3xl mx-auto animate-slide-up drop-shadow-md" style={{animationDelay: '0.2s'}}>
-            Комплексный анализ системы управления тендерным отделом для повышения эффективности закупочных процессов
+          <p className="text-xl text-white/95 mb-12 max-w-4xl mx-auto animate-slide-up drop-shadow-lg font-medium" style={{animationDelay: '0.2s'}}>
+Получите эксклюзивный аудит тендерного отдела от эксперта-практика. Увеличьте прибыль на 40-60% уже через 3 месяца!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay: '0.4s'}}>
-            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button size="lg" className="gold-gradient hover:scale-110 text-black font-bold text-lg px-8 py-4 premium-shadow" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <Icon name="FileText" className="mr-2 h-5 w-5" />
-              Заказать аудит
+ПОЛУЧИТЬ ПРЕМИАЛЬНЫЙ АУДИТ
             </Button>
-            <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold text-lg px-8 py-4 backdrop-blur-sm" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <Icon name="Phone" className="mr-2 h-5 w-5" />
               Консультация
             </Button>
@@ -100,11 +101,12 @@ export default function Index() {
       {/* Services Section */}
       <section id="services" className="py-16 bg-card-gradient relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Наши услуги</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Полный спектр услуг по оптимизации работы тендерного отдела
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-display font-bold text-gray-900 mb-6">ЭКСКЛЮЗИВНЫЕ УСЛУГИ</h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+              Премиальные решения для максимизации прибыли от тендерных процедур
             </p>
+            <div className="w-24 h-1 gold-gradient mx-auto mt-6"></div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -587,6 +589,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Premium Testimonials */}
+      <PremiumTestimonial />
 
       {/* About Section */}
       <section id="about" className="py-16 bg-white">
