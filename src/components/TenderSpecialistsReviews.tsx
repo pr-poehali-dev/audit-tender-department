@@ -142,30 +142,7 @@ export default function TenderSpecialistsReviews() {
           ))}
         </div>
 
-        {/* Summary Stats */}
-        <div className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-2xl p-8 text-white">
-          <h3 className="text-2xl font-display font-bold text-center mb-8">
-            СУММАРНЫЕ РЕЗУЛЬТАТЫ КЛИЕНТОВ
-          </h3>
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-gold text-4xl font-bold mb-2">₽387M</div>
-              <div className="text-white/80">Дополнительной прибыли</div>
-            </div>
-            <div>
-              <div className="text-gold text-4xl font-bold mb-2">1,847</div>
-              <div className="text-white/80">Выигранных тендеров</div>
-            </div>
-            <div>
-              <div className="text-gold text-4xl font-bold mb-2">89%</div>
-              <div className="text-white/80">Довольных клиентов</div>
-            </div>
-            <div>
-              <div className="text-gold text-4xl font-bold mb-2">24 мес</div>
-              <div className="text-white/80">Средний срок сотрудничества</div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
