@@ -69,16 +69,23 @@ export default function Index() {
                 <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-2xl blur-[1px] opacity-20"></div>
                 
                 {/* Main Image */}
-                <div className="relative bg-gradient-to-br from-premium-gray/80 via-premium-dark/60 to-premium-gray/90 p-6 rounded-2xl premium-shadow border border-gold/20">
+                <div className="relative bg-gradient-to-br from-premium-gray/60 via-premium-dark/40 to-premium-gray/70 p-4 rounded-xl shadow-glow border border-gold/30 hover:border-gold/50 transition-all duration-500">
                   <img
                     src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
                     alt="Станислав Авилов"
-                    className="w-72 h-72 mx-auto object-scale-down rounded-xl border-2 border-gold/30 shadow-glow hover:scale-105 transition-all duration-700 filter brightness-110 contrast-105"
+                    className="w-48 h-48 mx-auto object-scale-down rounded-lg border border-gold/40 shadow-lg hover:scale-110 hover:shadow-glow transition-all duration-500 filter brightness-115 contrast-110"
                   />
                   
                   {/* Premium Accents */}
-                  <div className="absolute top-2 right-2 w-6 h-6 gold-gradient rounded-full shadow-lg animate-pulse-slow"></div>
-                  <div className="absolute bottom-2 left-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-glow"></div>
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-gold-light to-gold text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-pulse">
+                    ⭐ EXPERT
+                  </div>
+                  <div className="absolute -bottom-2 -left-2 bg-gradient-to-r from-gold to-yellow-400 text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                    🏆 #1 В РОССИИ
+                  </div>
+                  
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5 rounded-xl pointer-events-none"></div>
                   
                   {/* Luxury Badge */}
                   <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 gold-gradient px-4 py-1 rounded-full text-black text-xs font-bold tracking-wider shadow-lg">
