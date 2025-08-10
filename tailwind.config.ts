@@ -42,7 +42,10 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					400: '#fb7185',
+					500: '#f43f5e',
+					600: '#e11d48'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',

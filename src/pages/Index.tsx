@@ -5,9 +5,9 @@ import Icon from "@/components/ui/icon";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 animate-fade-in">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-white/90 backdrop-blur-md shadow-soft border-b border-white/20 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -28,16 +28,18 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-200">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <section id="home" className="py-20 px-4 sm:px-6 lg:px-8 bg-hero-gradient relative overflow-hidden">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="absolute top-20 left-1/4 w-32 h-32 bg-white/20 rounded-full blur-xl animate-float"></div>
+          <div className="absolute top-40 right-1/3 w-24 h-24 bg-pink-300/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up drop-shadow-lg">
             Профессиональный аудит
-            <span className="text-primary block">тендерного отдела</span>
+            <span className="text-yellow-300 block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">тендерного отдела</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto animate-slide-up drop-shadow-md" style={{animationDelay: '0.2s'}}>
             Комплексный анализ системы управления тендерным отделом для повышения эффективности закупочных процессов
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay: '0.4s'}}>
             <Button size="lg" className="bg-primary hover:bg-primary/90">
               <Icon name="FileText" className="mr-2 h-5 w-5" />
               Заказать аудит
@@ -51,24 +53,27 @@ export default function Index() {
       </section>
 
       {/* Founder Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/3">
-              <img
-                src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
-                alt="Авилов С.П."
-                className="w-80 h-80 shadow-2xl mx-auto object-scale-down rounded-[0.25rem]"
-              />
+              <div className="relative">
+                <img
+                  src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
+                  alt="Авилов С.П."
+                  className="w-80 h-80 shadow-soft mx-auto object-scale-down rounded-2xl border-4 border-white/50 hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-primary-600 rounded-full shadow-glow animate-pulse-slow"></div>
+              </div>
             </div>
-            <div className="lg:w-2/3">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <div className="lg:w-2/3 animate-slide-up">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
                 Авилов Станислав Петрович
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                <span className="text-primary font-semibold">Эксперт по государственным закупкам</span> с 15-летним опытом
+                <span className="text-primary-600 font-semibold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">Эксперт по государственным закупкам</span> с 15-летним опытом
               </p>
-              <blockquote className="text-lg text-gray-600 italic leading-relaxed mb-8 border-l-4 border-primary pl-6">
+              <blockquote className="text-lg text-gray-600 italic leading-relaxed mb-8 border-l-4 border-gradient-to-b from-primary-500 to-accent-500 pl-6 bg-white/50 backdrop-blur-sm rounded-r-lg p-6 shadow-soft">
                 "Государственные закупки — это не просто процедуры и документы. Это инструмент развития экономики, 
                 создания справедливой конкуренции и эффективного использования бюджетных средств. За каждой тендерной 
                 процедурой стоят люди, их потребности и будущее нашего общества. 
@@ -77,11 +82,11 @@ export default function Index() {
                 общественным интересам и способствует устойчивому развитию бизнеса."
               </blockquote>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
+                <Button size="lg" className="bg-primary-600 hover:bg-primary-700 shadow-glow hover:shadow-xl hover:scale-105 transition-all duration-300">
                   <Icon name="Calendar" className="mr-2 h-5 w-5" />
                   Записаться на консультацию
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="border-primary-600 text-primary-600 hover:bg-primary-50 hover:scale-105 transition-all duration-300">
                   <Icon name="FileText" className="mr-2 h-5 w-5" />
                   Скачать портфолио
                 </Button>
@@ -92,7 +97,7 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-white">
+      <section id="services" className="py-16 bg-card-gradient relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Наши услуги</h2>
@@ -105,7 +110,7 @@ export default function Index() {
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Search" className="h-6 w-6 text-primary" />
+                  <Icon name="Search" className="h-6 w-6 text-primary-600" />
                 </div>
                 <CardTitle>Анализ процессов</CardTitle>
                 <CardDescription>
@@ -117,7 +122,7 @@ export default function Index() {
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Shield" className="h-6 w-6 text-primary" />
+                  <Icon name="Shield" className="h-6 w-6 text-primary-600" />
                 </div>
                 <CardTitle>Контроль качества</CardTitle>
                 <CardDescription>
@@ -129,7 +134,7 @@ export default function Index() {
             <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="TrendingUp" className="h-6 w-6 text-primary" />
+                  <Icon name="TrendingUp" className="h-6 w-6 text-primary-600" />
                 </div>
                 <CardTitle>Оптимизация</CardTitle>
                 <CardDescription>
