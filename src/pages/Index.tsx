@@ -705,7 +705,7 @@ export default function Index() {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
               Получить консультацию
             </Button>
