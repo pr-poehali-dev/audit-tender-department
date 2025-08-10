@@ -40,7 +40,7 @@ export default function Index() {
             Комплексный анализ системы управления тендерным отделом для повышения эффективности закупочных процессов
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay: '0.4s'}}>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <Icon name="FileText" className="mr-2 h-5 w-5" />
               Заказать аудит
             </Button>
