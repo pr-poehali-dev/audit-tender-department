@@ -90,10 +90,7 @@ export default function Index() {
                   <Icon name="Calendar" className="mr-2 h-5 w-5" />
                   Записаться на консультацию
                 </Button>
-                <Button variant="outline" size="lg" className="border-primary-600 text-primary-600 hover:bg-primary-50 hover:scale-105 transition-all duration-300">
-                  <Icon name="FileText" className="mr-2 h-5 w-5" />
-                  Скачать портфолио
-                </Button>
+
               </div>
             </div>
           </div>
