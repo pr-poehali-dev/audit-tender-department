@@ -34,7 +34,7 @@ export default function Index() {
           <div className="absolute top-40 right-1/3 w-24 h-24 bg-pink-300/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-700 mb-6 animate-slide-up drop-shadow-lg">
             Профессиональный аудит
-            <span className="text-yellow-300 block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">тендерного отдела</span>
+            <span className="text-gray-500 block">тендерного отдела</span>
           </h1>
           <p className="text-xl text-black mb-8 max-w-3xl mx-auto animate-slide-up drop-shadow-md" style={{animationDelay: '0.2s'}}>
             Комплексный анализ системы управления тендерным отделом для повышения эффективности закупочных процессов
