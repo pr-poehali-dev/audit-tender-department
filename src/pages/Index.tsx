@@ -11,7 +11,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Icon name="FileCheck" className="h-8 w-8 text-primary mr-3" />
+              <img 
+                src="/img/3288d581-fe6d-4184-94a4-5fd9b20dcf73.jpg" 
+                alt="Tender Audit Heraldry" 
+                className="h-8 w-8 mr-3 object-contain" 
+              />
               <span className="text-xl font-semibold text-gray-900">Inc AVILOV TENDER AUDIT</span>
             </div>
             <div className="hidden md:block">
