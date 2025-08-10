@@ -34,18 +34,18 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-24 px-4 sm:px-6 lg:px-8 premium-dark-gradient relative overflow-hidden min-h-[90vh] flex items-center">
+      <section id="home" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 premium-dark-gradient relative overflow-hidden min-h-[90vh] flex items-center">
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="absolute top-20 left-1/4 w-32 h-32 bg-gold/20 rounded-full blur-xl animate-float"></div>
           <div className="absolute top-40 right-1/3 w-24 h-24 bg-gold/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 animate-slide-up drop-shadow-2xl leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-6 sm:mb-8 animate-slide-up drop-shadow-2xl leading-tight">
             Профессиональный аудит
             <span className="text-white block font-display drop-shadow-lg">тендерного отдела</span>
           </h1>
-          <p className="text-xl text-white/95 mb-12 max-w-4xl mx-auto animate-slide-up drop-shadow-lg font-medium" style={{animationDelay: '0.2s'}}>
+          <p className="text-base sm:text-lg md:text-xl text-white/95 mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto animate-slide-up drop-shadow-lg font-medium px-4 sm:px-0" style={{animationDelay: '0.2s'}}>
 Получите эксклюзивный аудит тендерного отдела от эксперта-практика. Увеличьте прибыль на 40-60% уже через 3 месяца!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay: '0.4s'}}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up px-4 sm:px-0" style={{animationDelay: '0.4s'}}>
             <Button size="lg" className="gold-gradient hover:scale-110 text-black font-bold text-lg px-8 py-4 premium-shadow" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <Icon name="FileText" className="mr-2 h-5 w-5" />
 ПОЛУЧИТЬ ПРЕМИАЛЬНЫЙ АУДИТ
@@ -73,9 +73,9 @@ export default function Index() {
                   <div className="absolute inset-0 bg-gradient-to-br from-gold/20 via-gold/10 to-gold/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
                   <div className="relative bg-gradient-to-br from-premium-dark via-black to-premium-gray p-1 rounded-2xl shadow-glow border border-gold/50 group-hover:border-gold/80 transition-all duration-700">
                     <img
-                      src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
-                      alt="Станислав Авилов"
-                      className="w-56 h-56 mx-auto object-scale-down rounded-xl shadow-2xl hover:scale-105 transition-all duration-700 filter brightness-125 contrast-125 saturate-110 group-hover:brightness-150"
+                      src="/img/035aaf9a-9f0c-4af0-8ace-d389221cc817.jpg"
+                      alt="Эксперт по тендерам - профессиональный анализ"
+                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-56 md:h-56 mx-auto object-cover rounded-xl shadow-2xl hover:scale-105 transition-all duration-700 filter brightness-125 contrast-125 saturate-110 group-hover:brightness-150"
                     />
                     {/* Dramatic lighting effect */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-gold/20 rounded-xl pointer-events-none group-hover:from-gold/10 group-hover:to-gold/30 transition-all duration-700"></div>
