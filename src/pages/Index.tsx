@@ -40,7 +40,7 @@ export default function Index() {
           <div className="absolute top-40 right-1/3 w-24 h-24 bg-pink-300/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
           <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-8 animate-slide-up drop-shadow-2xl leading-tight">
             Профессиональный аудит
-            <span className="text-gold block font-display">тендерного отдела</span>
+            <span className="text-white block font-display drop-shadow-lg">тендерного отдела</span>
           </h1>
           <p className="text-xl text-white/95 mb-12 max-w-4xl mx-auto animate-slide-up drop-shadow-lg font-medium" style={{animationDelay: '0.2s'}}>
 Получите эксклюзивный аудит тендерного отдела от эксперта-практика. Увеличьте прибыль на 40-60% уже через 3 месяца!
