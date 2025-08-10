@@ -72,7 +72,7 @@ export default function Index() {
             </div>
             <div className="lg:w-2/3 animate-slide-up">
               <h2 className="text-4xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent">
-                Авилов Станислав Петрович
+                Станислав Авилов
               </h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 <span className="text-primary-600 font-semibold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">Эксперт по государственным закупкам</span> с 15-летним опытом
