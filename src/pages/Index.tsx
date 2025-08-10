@@ -71,9 +71,9 @@ export default function Index() {
                 {/* Main Image */}
                 <div className="relative bg-gradient-to-br from-premium-gray/80 via-premium-dark/60 to-premium-gray/90 p-6 rounded-2xl premium-shadow border border-gold/20">
                   <img
-                    src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
+                    src="/img/564fa61f-1f8f-489b-8478-c31a677548c2.jpg"
                     alt="Станислав Авилов"
-                    className="w-72 h-72 mx-auto object-scale-down rounded-xl border-2 border-yellow-500/20 shadow-inner hover:scale-105 transition-all duration-700 filter brightness-110 contrast-105"
+                    className="w-72 h-72 mx-auto object-cover rounded-xl border-2 border-gold/30 shadow-glow hover:scale-105 transition-all duration-700 filter brightness-110 contrast-105"
                   />
                   
                   {/* Premium Accents */}
