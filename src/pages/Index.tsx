@@ -32,7 +32,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="absolute top-20 left-1/4 w-32 h-32 bg-white/20 rounded-full blur-xl animate-float"></div>
           <div className="absolute top-40 right-1/3 w-24 h-24 bg-pink-300/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-700 mb-6 animate-slide-up drop-shadow-lg">
             Профессиональный аудит
             <span className="text-yellow-300 block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">тендерного отдела</span>
           </h1>
