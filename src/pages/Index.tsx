@@ -94,7 +94,7 @@ export default function Index() {
                 Станислав Авилов
               </h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                Эксперт с многолетним опытом управления тендерным отделом со стороны Поставщика
+                Основатель проекта, Эксперт с многолетним опытом управления тендерным отделом со стороны Поставщика
               </p>
               <blockquote className="text-lg text-gray-300 italic leading-relaxed mb-8 border-l-4 border-gray-600 pl-6 bg-gray-800/30 backdrop-blur-sm rounded-r-lg p-6 border border-gray-700/30">
                 "Государственные закупки — это не просто процедуры и документы. Это инструмент развития экономики, 
