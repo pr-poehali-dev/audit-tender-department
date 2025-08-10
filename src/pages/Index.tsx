@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
-import PremiumTestimonial from "@/components/PremiumTestimonial";
+
 import TenderSpecialistsReviews from "@/components/TenderSpecialistsReviews";
 
 export default function Index() {
@@ -607,9 +607,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-      {/* Premium Testimonials */}
-      <PremiumTestimonial />
 
       {/* Tender Specialists Reviews */}
       <TenderSpecialistsReviews />
