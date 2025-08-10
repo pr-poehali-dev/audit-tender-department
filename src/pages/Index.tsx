@@ -90,13 +90,13 @@ export default function Index() {
               </div>
             </div>
             <div className="lg:w-2/3 animate-slide-up">
-              <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-gold via-yellow-400 to-gold bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold text-white mb-6">
                 Станислав Авилов
               </h2>
-              <p className="text-xl text-gray-100 mb-6 leading-relaxed">
-                <span className="text-gold font-semibold bg-gradient-to-r from-gold to-yellow-400 bg-clip-text text-transparent">Эксперт с многолетним опытом управления тендерным отделом со стороны Поставщика</span>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+                Эксперт с многолетним опытом управления тендерным отделом со стороны Поставщика
               </p>
-              <blockquote className="text-lg text-gray-300 italic leading-relaxed mb-8 border-l-4 border-gold pl-6 bg-premium-gray/30 backdrop-blur-sm rounded-r-lg p-6 premium-shadow border border-gold/20">
+              <blockquote className="text-lg text-gray-300 italic leading-relaxed mb-8 border-l-4 border-gray-600 pl-6 bg-gray-800/30 backdrop-blur-sm rounded-r-lg p-6 border border-gray-700/30">
                 "Государственные закупки — это не просто процедуры и документы. Это инструмент развития экономики, 
                 создания справедливой конкуренции и эффективного использования бюджетных средств. За каждой тендерной 
                 процедурой стоят люди, их потребности и будущее нашего общества. 
