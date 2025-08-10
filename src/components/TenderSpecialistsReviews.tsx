@@ -1,7 +1,12 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import ReviewModal from "./ReviewModal";
 
 export default function TenderSpecialistsReviews() {
+  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+  
   const reviews = [
     {
       name: "Елена Смирнова",
@@ -142,8 +147,31 @@ export default function TenderSpecialistsReviews() {
           ))}
         </div>
 
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <h3 className="text-2xl font-display font-bold text-white mb-4">
+            Работали с нами? Поделитесь опытом!
+          </h3>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Ваш отзыв поможет другим компаниям принять правильное решение и улучшить свои тендерные процессы
+          </p>
+          <Button 
+            size="lg" 
+            onClick={() => setIsReviewModalOpen(true)}
+            className="gold-gradient text-black font-bold hover:scale-105 transition-all duration-300 shadow-glow"
+          >
+            <Icon name="PenTool" className="mr-2 h-5 w-5" />
+            Оставить отзыв
+          </Button>
+        </div>
 
       </div>
+      
+      {/* Review Modal */}
+      <ReviewModal 
+        isOpen={isReviewModalOpen} 
+        onClose={() => setIsReviewModalOpen(false)} 
+      />
     </section>
   );
 }
