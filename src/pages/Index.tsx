@@ -73,9 +73,9 @@ export default function Index() {
                   <div className="absolute inset-0 bg-gradient-to-br from-gold/20 via-gold/10 to-gold/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
                   <div className="relative bg-gradient-to-br from-premium-dark via-black to-premium-gray p-1 rounded-2xl shadow-glow border border-gold/50 group-hover:border-gold/80 transition-all duration-700">
                     <img
-                      src="/img/035aaf9a-9f0c-4af0-8ace-d389221cc817.jpg"
-                      alt="Эксперт по тендерам - профессиональный анализ"
-                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-56 md:h-56 mx-auto object-cover rounded-xl shadow-2xl hover:scale-105 transition-all duration-700 filter brightness-125 contrast-125 saturate-110 group-hover:brightness-150"
+                      src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
+                      alt="Станислав Авилов"
+                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-56 md:h-56 mx-auto object-scale-down rounded-xl shadow-2xl hover:scale-105 transition-all duration-700 filter brightness-125 contrast-125 saturate-110 group-hover:brightness-150"
                     />
                     {/* Dramatic lighting effect */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-gold/20 rounded-xl pointer-events-none group-hover:from-gold/10 group-hover:to-gold/30 transition-all duration-700"></div>
