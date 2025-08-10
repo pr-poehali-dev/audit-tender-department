@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import PremiumTestimonial from "@/components/PremiumTestimonial";
+import TenderSpecialistsReviews from "@/components/TenderSpecialistsReviews";
 
 export default function Index() {
   return (
@@ -611,6 +612,9 @@ export default function Index() {
 
       {/* Premium Testimonials */}
       <PremiumTestimonial />
+
+      {/* Tender Specialists Reviews */}
+      <TenderSpecialistsReviews />
 
       {/* About Section */}
       <section id="about" className="py-16 bg-white">
