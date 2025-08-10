@@ -62,13 +62,32 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/3">
-              <div className="relative">
-                <img
-                  src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
-                  alt="Авилов С.П."
-                  className="w-80 h-80 shadow-soft mx-auto object-scale-down rounded-2xl border-4 border-white/50 hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-primary-600 rounded-full shadow-glow animate-pulse-slow"></div>
+              <div className="relative group">
+                {/* Premium Golden Frame */}
+                <div className="absolute -inset-4 gold-gradient rounded-3xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-2xl blur-[1px] opacity-20"></div>
+                
+                {/* Main Image */}
+                <div className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 p-6 rounded-2xl premium-shadow">
+                  <img
+                    src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
+                    alt="Станислав Авилов"
+                    className="w-72 h-72 mx-auto object-scale-down rounded-xl border-2 border-yellow-500/20 shadow-inner hover:scale-105 transition-all duration-700 filter brightness-110 contrast-105"
+                  />
+                  
+                  {/* Premium Accents */}
+                  <div className="absolute top-2 right-2 w-6 h-6 gold-gradient rounded-full shadow-lg animate-pulse-slow"></div>
+                  <div className="absolute bottom-2 left-2 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-glow"></div>
+                  
+                  {/* Luxury Badge */}
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 gold-gradient px-4 py-1 rounded-full text-black text-xs font-bold tracking-wider shadow-lg">
+                    EXPERT
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-6 -left-6 w-12 h-12 gold-gradient rounded-full opacity-20 animate-float blur-sm"></div>
+                <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-30 animate-float blur-sm" style={{animationDelay: '2s'}}></div>
               </div>
             </div>
             <div className="lg:w-2/3 animate-slide-up">
