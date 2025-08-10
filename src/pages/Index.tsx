@@ -34,24 +34,24 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 premium-dark-gradient relative overflow-hidden min-h-[90vh] flex items-center">
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="absolute top-20 left-1/4 w-32 h-32 bg-gold/20 rounded-full blur-xl animate-float"></div>
-          <div className="absolute top-40 right-1/3 w-24 h-24 bg-gold/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-6 sm:mb-8 animate-slide-up drop-shadow-2xl leading-tight">
+      <section id="home" className="py-8 sm:py-12 md:py-16 lg:py-24 px-3 sm:px-4 lg:px-8 premium-dark-gradient relative overflow-hidden min-h-screen flex items-center">
+        <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
+          <div className="hidden sm:block absolute top-20 left-1/4 w-32 h-32 bg-gold/20 rounded-full blur-xl animate-float"></div>
+          <div className="hidden sm:block absolute top-40 right-1/3 w-24 h-24 bg-gold/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-4 sm:mb-6 md:mb-8 animate-slide-up drop-shadow-2xl leading-tight px-2 sm:px-0">
             Профессиональный аудит
             <span className="text-white block font-display drop-shadow-lg">тендерного отдела</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-white/95 mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto animate-slide-up drop-shadow-lg font-medium px-4 sm:px-0" style={{animationDelay: '0.2s'}}>
+          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white/95 mb-6 sm:mb-8 md:mb-10 lg:mb-12 max-w-4xl mx-auto animate-slide-up drop-shadow-lg font-medium px-4 sm:px-2 md:px-0 leading-relaxed" style={{animationDelay: '0.2s'}}>
 Получите эксклюзивный аудит тендерного отдела от эксперта-практика. Увеличьте прибыль на 40-60% уже через 3 месяца!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up px-4 sm:px-0" style={{animationDelay: '0.4s'}}>
-            <Button size="lg" className="gold-gradient hover:scale-110 text-black font-bold text-lg px-8 py-4 premium-shadow" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-slide-up px-4 sm:px-2 md:px-0" style={{animationDelay: '0.4s'}}>
+            <Button size="lg" className="gold-gradient hover:scale-110 text-black font-bold text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 premium-shadow w-full sm:w-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               <Icon name="FileText" className="mr-2 h-5 w-5" />
 ПОЛУЧИТЬ ПРЕМИАЛЬНЫЙ АУДИТ
             </Button>
-            <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold text-lg px-8 py-4 backdrop-blur-sm" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Icon name="Phone" className="mr-2 h-5 w-5" />
+            <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 backdrop-blur-sm w-full sm:w-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Icon name="Phone" className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
               Консультация
             </Button>
           </div>
