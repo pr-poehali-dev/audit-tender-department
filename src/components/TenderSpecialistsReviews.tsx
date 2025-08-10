@@ -96,13 +96,13 @@ export default function TenderSpecialistsReviews() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+    <section className="py-20 bg-premium-accent relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-display font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-display font-bold text-white mb-6">
             ОТЗЫВЫ СПЕЦИАЛИСТОВ ТЕНДЕРНЫХ ОТДЕЛОВ
           </h2>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto font-medium">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto font-medium">
             Реальные результаты от профессионалов, которые работают с тендерами каждый день
           </p>
           <div className="w-24 h-1 gold-gradient mx-auto mt-6"></div>
@@ -110,7 +110,7 @@ export default function TenderSpecialistsReviews() {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {reviews.map((review, index) => (
-            <Card key={index} className="premium-shadow hover:shadow-glow transition-all duration-500 bg-white/80 backdrop-blur-sm border-0">
+            <Card key={index} className="premium-shadow hover:shadow-glow transition-all duration-500 bg-premium-gray/80 backdrop-blur-sm border border-gold/20">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="flex text-yellow-500 mr-3">
@@ -123,16 +123,15 @@ export default function TenderSpecialistsReviews() {
                   </div>
                 </div>
                 
-                <blockquote className="text-gray-700 leading-relaxed mb-6 text-base">
+                <blockquote className="text-gray-300 leading-relaxed mb-6 text-base">
                   "{review.text}"
                 </blockquote>
                 
                 <div className="flex items-start justify-between">
                   <div>
-                    <div className="font-bold text-gray-900 text-lg">{review.name}</div>
-                    <div className="text-primary-600 font-semibold text-sm">{review.position}</div>
-                    <div className="text-gray-600 text-sm">{review.company}</div>
-                    <div className="text-gray-500 text-xs mt-1">{review.experience}</div>
+                    <div className="font-bold text-white text-lg">{review.name}</div>
+                    <div className="text-gold font-semibold text-sm">{review.position}</div>
+                    <div className="text-gray-400 text-xs mt-1">{review.experience}</div>
                   </div>
                   <div className="text-right">
                     <Icon name="Quote" className="h-8 w-8 text-gold opacity-30" />
