@@ -69,23 +69,20 @@ export default function Index() {
                 <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-2xl blur-[1px] opacity-20"></div>
                 
                 {/* Main Image */}
-                <div className="relative bg-gradient-to-br from-premium-gray/60 via-premium-dark/40 to-premium-gray/70 p-4 rounded-xl shadow-glow border border-gold/30 hover:border-gold/50 transition-all duration-500">
-                  <img
-                    src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
-                    alt="Станислав Авилов"
-                    className="w-48 h-48 mx-auto object-scale-down rounded-lg border border-gold/40 shadow-lg hover:scale-110 hover:shadow-glow transition-all duration-500 filter brightness-115 contrast-110"
-                  />
-                  
-                  {/* Premium Accents */}
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-gold-light to-gold text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-pulse">
-                    ⭐ EXPERT
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gold/20 via-gold/10 to-gold/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
+                  <div className="relative bg-gradient-to-br from-premium-dark via-black to-premium-gray p-1 rounded-2xl shadow-glow border border-gold/50 group-hover:border-gold/80 transition-all duration-700">
+                    <img
+                      src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
+                      alt="Станислав Авилов"
+                      className="w-56 h-56 mx-auto object-scale-down rounded-xl shadow-2xl hover:scale-105 transition-all duration-700 filter brightness-125 contrast-125 saturate-110 group-hover:brightness-150"
+                    />
+                    {/* Dramatic lighting effect */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-gold/20 rounded-xl pointer-events-none group-hover:from-gold/10 group-hover:to-gold/30 transition-all duration-700"></div>
+                    {/* Premium border glow */}
+                    <div className="absolute -inset-1 bg-gradient-to-r from-gold/30 via-transparent to-gold/30 rounded-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-700 -z-10 blur-sm"></div>
                   </div>
-                  <div className="absolute -bottom-2 -left-2 bg-gradient-to-r from-gold to-yellow-400 text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
-                    🏆 #1 В РОССИИ
-                  </div>
-                  
-                  {/* Glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-gold/5 rounded-xl pointer-events-none"></div>
+                </div>
                   
                   {/* Luxury Badge */}
                   <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 gold-gradient px-4 py-1 rounded-full text-black text-xs font-bold tracking-wider shadow-lg">
