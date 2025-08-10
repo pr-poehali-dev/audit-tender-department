@@ -86,7 +86,7 @@ export default function Index() {
                 общественным интересам и способствует устойчивому развитию бизнеса."
               </blockquote>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary-600 hover:bg-primary-700 shadow-glow hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <Button size="lg" className="bg-primary-600 hover:bg-primary-700 shadow-glow hover:shadow-xl hover:scale-105 transition-all duration-300" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                   <Icon name="Calendar" className="mr-2 h-5 w-5" />
                   Записаться на консультацию
                 </Button>
