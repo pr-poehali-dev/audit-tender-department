@@ -74,7 +74,7 @@ export default function Index() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
-                <Icon name="Crown" className="w-7 h-7 text-white" />
+                <Icon name="Dog" className="w-7 h-7 text-white" />
               </div>
               <div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
@@ -499,7 +499,7 @@ export default function Index() {
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
-                  <Icon name="Crown" className="w-6 h-6 text-white" />
+                  <Icon name="Dog" className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
               </div>
