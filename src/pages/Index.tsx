@@ -74,7 +74,17 @@ export default function Index() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
-                <Icon name="Dog" className="w-7 h-7 text-white" />
+                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 18L4 16L6 18L4 20L2 18Z" />
+                  <path d="M18 18L20 16L22 18L20 20L18 18Z" />
+                  <path d="M4 16L6 12L8 10L10 8L12 6L14 8L16 10L18 12L20 16" />
+                  <path d="M6 12L8 14L10 12L8 10L6 12Z" />
+                  <path d="M16 12L18 14L20 12L18 10L16 12Z" />
+                  <path d="M8 10L10 8L12 6L14 8L16 10" />
+                  <path d="M10 12L12 10L14 12" />
+                  <circle cx="9" cy="10" r="1" fill="currentColor" />
+                  <circle cx="15" cy="10" r="1" fill="currentColor" />
+                </svg>
               </div>
               <div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
@@ -499,7 +509,17 @@ export default function Index() {
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
-                  <Icon name="Dog" className="w-6 h-6 text-white" />
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 18L4 16L6 18L4 20L2 18Z" />
+                    <path d="M18 18L20 16L22 18L20 20L18 18Z" />
+                    <path d="M4 16L6 12L8 10L10 8L12 6L14 8L16 10L18 12L20 16" />
+                    <path d="M6 12L8 14L10 12L8 10L6 12Z" />
+                    <path d="M16 12L18 14L20 12L18 10L16 12Z" />
+                    <path d="M8 10L10 8L12 6L14 8L16 10" />
+                    <path d="M10 12L12 10L14 12" />
+                    <circle cx="9" cy="10" r="1" fill="currentColor" />
+                    <circle cx="15" cy="10" r="1" fill="currentColor" />
+                  </svg>
                 </div>
                 <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
               </div>
