@@ -40,7 +40,21 @@ export default function Index() {
     };
   }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const [reviewForm, setReviewForm] = useState({ name: "", company: "", text: "", rating: 5 });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 500);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   const [reviews, setReviews] = useState([
     {
       name: "Михаил Сергеев",
@@ -765,6 +779,17 @@ export default function Index() {
         <Icon name="MessageCircle" className="w-8 h-8 text-white" />
         <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse"></span>
       </a>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-24 right-6 z-50 w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 rounded-full shadow-2xl shadow-orange-600/50 flex items-center justify-center transition-all duration-300 hover:scale-110"
+          aria-label="Наверх"
+        >
+          <Icon name="ArrowUp" className="w-6 h-6 text-white" />
+        </button>
+      )}
     </div>
   );
 }
