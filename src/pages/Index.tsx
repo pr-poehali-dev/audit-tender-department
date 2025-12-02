@@ -289,6 +289,162 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-orange-500/20 text-orange-400 hover:bg-orange-500/30 border border-orange-500/30 mb-4">
+              <Icon name="DollarSign" className="w-4 h-4 mr-2" />
+              Тарифы
+            </Badge>
+            <h2 className="text-4xl font-bold text-white mb-4">Сколько стоит тендерное сопровождение?</h2>
+            <p className="text-xl text-orange-400 max-w-3xl mx-auto font-semibold">
+              Дешевле, чем содержание одного штатного сотрудника!
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* 1 месяц */}
+            <Card className="border border-orange-600/30 bg-gradient-to-br from-slate-900 to-slate-800 hover:border-orange-500/50 transition-all hover:scale-105">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-600/50">
+                    <Icon name="Zap" className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">1 месяц</h3>
+                  <div className="mb-6">
+                    <div className="text-4xl font-bold text-orange-400 mb-1">30 000 ₽</div>
+                    <div className="text-slate-400 text-sm">+ 1,5% от контракта</div>
+                  </div>
+                  <ul className="space-y-3 text-left text-slate-300 mb-6">
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Полное сопровождение</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Подготовка документов</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Консультации</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800">
+                    Выбрать
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 3 месяца */}
+            <Card className="border border-orange-600/30 bg-gradient-to-br from-slate-900 to-slate-800 hover:border-orange-500/50 transition-all hover:scale-105">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-600/50">
+                    <Icon name="TrendingUp" className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">3 месяца</h3>
+                  <div className="mb-6">
+                    <div className="text-4xl font-bold text-orange-400 mb-1">84 000 ₽</div>
+                    <div className="text-slate-400 text-sm">+ 1,5% от контракта</div>
+                    <div className="text-green-400 text-xs mt-1">Экономия 6 000 ₽</div>
+                  </div>
+                  <ul className="space-y-3 text-left text-slate-300 mb-6">
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Полное сопровождение</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Подготовка документов</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Консультации</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800">
+                    Выбрать
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 6 месяцев */}
+            <Card className="border-2 border-orange-500 bg-gradient-to-br from-orange-950 to-slate-900 hover:border-orange-400 transition-all hover:scale-105 relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-orange-500 to-orange-700 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                Популярный
+              </div>
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-600/50">
+                    <Icon name="Award" className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">6 месяцев</h3>
+                  <div className="mb-6">
+                    <div className="text-4xl font-bold text-orange-400 mb-1">160 000 ₽</div>
+                    <div className="text-slate-400 text-sm">+ 1,5% от контракта</div>
+                    <div className="text-green-400 text-xs mt-1">Экономия 20 000 ₽</div>
+                  </div>
+                  <ul className="space-y-3 text-left text-slate-300 mb-6">
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Полное сопровождение</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Подготовка документов</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Консультации</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800">
+                    Выбрать
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* 12 месяцев */}
+            <Card className="border border-orange-600/30 bg-gradient-to-br from-slate-900 to-slate-800 hover:border-orange-500/50 transition-all hover:scale-105">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-orange-600/50">
+                    <Icon name="Crown" className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">12 месяцев</h3>
+                  <div className="mb-6">
+                    <div className="text-4xl font-bold text-orange-400 mb-1">300 000 ₽</div>
+                    <div className="text-slate-400 text-sm">+ 1,5% от контракта</div>
+                    <div className="text-green-400 text-xs mt-1">Экономия 60 000 ₽</div>
+                  </div>
+                  <ul className="space-y-3 text-left text-slate-300 mb-6">
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Полное сопровождение</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Подготовка документов</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Check" className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <span>Консультации</span>
+                    </li>
+                  </ul>
+                  <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800">
+                    Выбрать
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews Section */}
       <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
