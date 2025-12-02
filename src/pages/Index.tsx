@@ -447,17 +447,9 @@ export default function Index() {
                 <div className="bg-gradient-to-br from-amber-600/20 to-amber-800/20 backdrop-blur-sm border border-amber-500/30 text-white p-8 rounded-2xl">
                   <h3 className="text-2xl font-bold mb-4 text-amber-400">Режим работы</h3>
                   <div className="space-y-3 text-slate-300">
-                    <div className="flex justify-between pb-2 border-b border-amber-600/30">
-                      <span>Понедельник - Пятница</span>
-                      <span className="text-amber-400 font-semibold">9:00 - 18:00</span>
-                    </div>
-                    <div className="flex justify-between pb-2 border-b border-amber-600/30">
-                      <span>Суббота</span>
-                      <span className="text-amber-400 font-semibold">10:00 - 16:00</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Воскресенье</span>
-                      <span className="text-slate-500">Выходной</span>
+                    <div className="flex justify-between pb-2">
+                      <span>Ежедневно</span>
+                      <span className="text-amber-400 font-semibold">9:00 - 23:30</span>
                     </div>
                   </div>
                   
