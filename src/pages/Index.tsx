@@ -4,9 +4,41 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Index() {
+  useEffect(() => {
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ТендерМаркет",
+      "description": "Премиальное тендерное сопровождение для вашего бизнеса",
+      "url": "https://audit-tender-department.poehali.app",
+      "telephone": "+7-911-709-05-57",
+      "email": "IPAvilovSP@yandex.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Санкт-Петербург",
+        "addressCountry": "RU"
+      },
+      "areaServed": "RU",
+      "priceRange": "30000-300000 RUB",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "6"
+      }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [reviewForm, setReviewForm] = useState({ name: "", company: "", text: "", rating: 5 });
   const [reviews, setReviews] = useState([
@@ -130,7 +162,7 @@ export default function Index() {
                 Премиальное тендерное сопровождение
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Ваш надёжный партнёр в мире госзакупок
+                Тендерное сопровождение в Санкт-Петербурге
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed">
                 Комплексное сопровождение тендеров, электронное актирование, разработка технических заданий. Работаем на результат.
@@ -171,7 +203,7 @@ export default function Index() {
               <Icon name="Briefcase" className="w-4 h-4 mr-2" />
               Наши услуги
             </Badge>
-            <h2 className="text-4xl font-bold text-white mb-4">Полный спектр тендерных услуг</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Услуги тендерного сопровождения</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               От поиска тендера до электронного актирования работ
             </p>
