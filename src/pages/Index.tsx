@@ -644,6 +644,29 @@ export default function Index() {
                 </a>
               </Button>
             </div>
+
+            {/* Personal Message */}
+            <div className="mt-12 pt-8 border-t border-orange-600/20">
+              <div className="font-handwriting text-slate-400 text-sm md:text-base leading-relaxed space-y-3 max-w-3xl mx-auto">
+                <p className="italic">
+                  Накопление опыта в тендерном направлении сопряжено с неизбежными ошибками, ведущими к значительным финансовым и репутационным рискам, вплоть до включения в Реестр недобросовестных поставщиков (РНП).
+                </p>
+                
+                <p className="italic">
+                  Избегайте неоправданных рисков, используя опыт тех, кто давно миновал подобные трудности. Обратитесь к профессионалам, готовым поддержать вас на пути к эффективным и безопасным результатам в тендерной деятельности.
+                </p>
+                
+                <p className="italic">
+                  Желаем продуктивного развития и высоких достижений.
+                </p>
+                
+                <div className="pt-2 text-right">
+                  <p className="italic text-orange-400 font-semibold">
+                    С уважением,<br />Авилов С.П.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -698,33 +721,6 @@ export default function Index() {
           </div>
         </div>
       </footer>
-
-      {/* Personal Message Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-orange-950/20 to-slate-900/50 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-600/20 shadow-2xl">
-            <div className="font-handwriting text-slate-300 text-lg md:text-xl leading-relaxed space-y-4">
-              <p className="italic">
-                Накопление опыта в тендерном направлении сопряжено с неизбежными ошибками, ведущими к значительным финансовым и репутационным рискам, вплоть до включения в Реестр недобросовестных поставщиков (РНП).
-              </p>
-              
-              <p className="italic">
-                Избегайте неоправданных рисков, используя опыт тех, кто давно миновал подобные трудности. Обратитесь к профессионалам, готовым поддержать вас на пути к эффективным и безопасным результатам в тендерной деятельности.
-              </p>
-              
-              <p className="italic">
-                Желаем продуктивного развития и высоких достижений.
-              </p>
-              
-              <div className="pt-4 text-right">
-                <p className="italic text-orange-400 font-semibold text-xl">
-                  С уважением,<br />Авилов С.П.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Floating WhatsApp Button */}
       <a
