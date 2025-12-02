@@ -1,33 +1,75 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [reviewForm, setReviewForm] = useState({ name: "", company: "", text: "", rating: 5 });
+  const [reviews, setReviews] = useState([
+    {
+      name: "Михаил Сергеев",
+      company: "ООО 'СтройТех'",
+      text: "Благодаря профессионализму команды мы выиграли государственный контракт на 15 млн рублей. Особенно хочу отметить качество подготовки технической документации.",
+      rating: 5,
+      date: "15.11.2024"
+    },
+    {
+      name: "Елена Николаева",
+      company: "ИП Николаева Е.В.",
+      text: "Сопровождение на всех этапах было безупречным. Помогли разобраться с электронным актированием, что сэкономило массу времени.",
+      rating: 5,
+      date: "08.11.2024"
+    },
+    {
+      name: "Александр Петров",
+      company: "ООО 'ТехСнаб'",
+      text: "Отличная работа с техническими заданиями. Специалисты учли все нюансы нашей отрасли и подготовили грамотное описание объекта закупки.",
+      rating: 5,
+      date: "02.11.2024"
+    }
+  ]);
+
+  const handleReviewSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (reviewForm.name && reviewForm.text) {
+      const newReview = {
+        ...reviewForm,
+        date: new Date().toLocaleDateString('ru-RU')
+      };
+      setReviews([newReview, ...reviews]);
+      setReviewForm({ name: "", company: "", text: "", rating: 5 });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Navigation */}
-      <nav className="bg-slate-900/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-slate-800">
+      <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-amber-600/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <Icon name="FileCheck" className="w-6 h-6 text-white" />
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
+                <Icon name="Crown" className="w-7 h-7 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">ТендерПро</span>
+              <div>
+                <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерПро</span>
+                <div className="text-xs text-slate-400">Премиальное тендерное сопровождение</div>
+              </div>
             </div>
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Услуги</a>
-              <a href="#advantages" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Преимущества</a>
-              <a href="#process" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Процесс</a>
-              <a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Контакты</a>
-              <Button className="bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                Получить консультацию
+              <a href="#services" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Услуги</a>
+              <a href="#advantages" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Преимущества</a>
+              <a href="#reviews" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Отзывы</a>
+              <a href="#contact" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Контакты</a>
+              <Button className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg shadow-amber-600/50" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Icon name="Phone" className="w-4 h-4 mr-2" />
+                Консультация
               </Button>
             </div>
 
@@ -40,63 +82,61 @@ export default function Index() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden py-4 space-y-3">
-              <a href="#services" className="block text-slate-300 hover:text-blue-400 py-2">Услуги</a>
-              <a href="#advantages" className="block text-slate-300 hover:text-blue-400 py-2">Преимущества</a>
-              <a href="#process" className="block text-slate-300 hover:text-blue-400 py-2">Процесс</a>
-              <a href="#contact" className="block text-slate-300 hover:text-blue-400 py-2">Контакты</a>
+              <a href="#services" className="block text-slate-300 hover:text-amber-400 py-2">Услуги</a>
+              <a href="#advantages" className="block text-slate-300 hover:text-amber-400 py-2">Преимущества</a>
+              <a href="#reviews" className="block text-slate-300 hover:text-amber-400 py-2">Отзывы</a>
+              <a href="#contact" className="block text-slate-300 hover:text-amber-400 py-2">Контакты</a>
             </div>
           )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-600/10 via-slate-950 to-slate-950"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-amber-600/20 rounded-full blur-3xl"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">
+            <div className="space-y-8">
+              <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30">
                 <Icon name="Award" className="w-4 h-4 mr-2" />
-                Профессиональное тендерное сопровождение
+                Премиальное тендерное сопровождение
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Победа в тендерах — наша специализация
+                Ваш надёжный партнёр в мире госзакупок
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed">
-                Комплексное сопровождение на всех этапах тендерных процедур. Увеличим ваши шансы на победу до 85%.
+                Комплексное сопровождение тендеров, электронное актирование, разработка технических заданий. Работаем на результат.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-lg shadow-xl shadow-amber-600/30" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                   <Icon name="Phone" className="w-5 h-5 mr-2" />
-                  Бесплатная консультация
+                  Получить консультацию
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-blue-400 text-blue-400 hover:bg-blue-950 text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Узнать больше
+                <Button size="lg" variant="outline" className="border-2 border-amber-500/50 text-amber-400 hover:bg-amber-950/50 text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Наши услуги
                 </Button>
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8">
-                <div>
-                  <div className="text-3xl font-bold text-blue-600">500+</div>
-                  <div className="text-sm text-slate-400">Выигранных тендеров</div>
+              <div className="grid grid-cols-2 gap-6 pt-8">
+                <div className="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-amber-600/20">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">12+ лет</div>
+                  <div className="text-sm text-slate-400 mt-2">Опыт работы на рынке</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-blue-600">85%</div>
-                  <div className="text-sm text-slate-400">Процент побед</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-blue-600">12 лет</div>
-                  <div className="text-sm text-slate-400">На рынке</div>
+                <div className="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-amber-600/20">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Санкт-Петербург</div>
+                  <div className="text-sm text-slate-400 mt-2">Работаем по всей России</div>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl blur-3xl opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-700 rounded-3xl blur-3xl opacity-20"></div>
               <img 
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" 
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop" 
                 alt="Тендерное сопровождение" 
-                className="relative rounded-2xl shadow-2xl w-full"
+                className="relative rounded-2xl shadow-2xl w-full border border-amber-600/20"
               />
             </div>
           </div>
@@ -104,16 +144,16 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
+            <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
               <Icon name="Briefcase" className="w-4 h-4 mr-2" />
               Наши услуги
             </Badge>
-            <h2 className="text-4xl font-bold text-white mb-4">Комплексное тендерное сопровождение</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Полный спектр тендерных услуг</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Полный цикл работ от поиска тендеров до заключения контракта
+              От поиска тендера до электронного актирования работ
             </p>
           </div>
 
@@ -121,53 +161,54 @@ export default function Index() {
             {[
               {
                 icon: "Search",
-                title: "Поиск тендеров",
-                description: "Мониторинг и отбор тендеров по вашим критериям на всех площадках",
-                features: ["Автоматизированный поиск", "Анализ конкурентов", "Оценка перспективности"]
+                title: "Поиск и анализ тендеров",
+                description: "Ежедневный мониторинг всех площадок электронных торгов и отбор перспективных закупок",
+                features: ["Мониторинг ЕИС", "Анализ конкурентов", "Оценка рентабельности"]
+              },
+              {
+                icon: "FileEdit",
+                title: "Техническое задание",
+                description: "Разработка технических заданий и описаний объектов закупок любой сложности",
+                features: ["Составление ТЗ", "Описание ОЗ", "Техническая экспертиза"]
               },
               {
                 icon: "FileText",
                 title: "Подготовка документов",
-                description: "Профессиональная подготовка заявок и необходимой документации",
-                features: ["Проверка требований", "Оформление заявки", "Юридическая экспертиза"]
+                description: "Профессиональная подготовка полного пакета документов для участия в тендере",
+                features: ["Заявки на участие", "Коммерческие предложения", "Обеспечительные документы"]
+              },
+              {
+                icon: "FileCheck2",
+                title: "Электронное актирование",
+                description: "Полное сопровождение процесса электронного актирования выполненных работ",
+                features: ["Формирование актов КС-2/КС-3", "Электронная подпись", "Загрузка в ЕИС"]
               },
               {
                 icon: "Shield",
                 title: "Правовое сопровождение",
-                description: "Защита ваших интересов на всех этапах тендерной процедуры",
-                features: ["Консультации юристов", "Обжалование решений", "Досудебное урегулирование"]
+                description: "Защита ваших интересов на всех этапах закупочной процедуры",
+                features: ["Юридические консультации", "Обжалование действий заказчика", "Досудебное урегулирование"]
               },
               {
                 icon: "TrendingUp",
-                title: "Финансовый анализ",
-                description: "Расчет коммерческого предложения и оптимизация ценообразования",
-                features: ["Анализ себестоимости", "Конкурентное ценообразование", "Расчет рентабельности"]
-              },
-              {
-                icon: "CheckCircle",
                 title: "Участие в торгах",
-                description: "Представление ваших интересов в электронных и очных торгах",
-                features: ["Стратегия торгов", "Онлайн-сопровождение", "Ценовые предложения"]
-              },
-              {
-                icon: "FileCheck",
-                title: "Заключение контракта",
-                description: "Полное сопровождение процесса заключения государственного контракта",
-                features: ["Проверка договора", "Согласование условий", "Подписание контракта"]
+                description: "Представление интересов в электронных аукционах и конкурсах",
+                features: ["Стратегия ценообразования", "Онлайн-сопровождение", "Работа с ценовыми предложениями"]
               }
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 border-slate-800 hover:border-blue-600 group bg-slate-800/50">
-                <CardContent className="p-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Icon name={service.icon} className="w-7 h-7 text-white" />
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 border border-amber-600/30 hover:border-amber-500 group bg-gradient-to-br from-slate-900 to-slate-800 backdrop-blur-sm overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <CardContent className="p-8 relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-amber-600/50">
+                    <Icon name={service.icon} className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>
                   <ul className="space-y-3">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <Icon name="Check" className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-300">{feature}</span>
+                        <Icon name="CheckCircle2" className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-400">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -179,185 +220,251 @@ export default function Index() {
       </section>
 
       {/* Advantages Section */}
-      <section id="advantages" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto">
+      <section id="advantages" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-600/10 via-transparent to-amber-600/10"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-blue-500 text-white hover:bg-blue-500 mb-4">
+            <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
               <Icon name="Star" className="w-4 h-4 mr-2" />
-              Почему выбирают нас
+              Наши преимущества
             </Badge>
-            <h2 className="text-4xl font-bold mb-4">Ваши преимущества при работе с нами</h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Профессиональный подход и многолетний опыт гарантируют результат
+            <h2 className="text-4xl font-bold text-white mb-4">Почему выбирают нас</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Профессионализм, опыт и индивидуальный подход к каждому клиенту
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: "Target",
-                title: "Высокий процент побед",
-                description: "85% выигранных тендеров благодаря профессиональному подходу"
+                icon: "Award",
+                title: "Опыт и экспертиза",
+                description: "Более 12 лет успешной работы в сфере государственных закупок"
               },
               {
                 icon: "Clock",
                 title: "Экономия времени",
-                description: "Освободите ресурсы компании для основной деятельности"
+                description: "Полное освобождение от рутинных процедур подготовки к тендерам"
               },
               {
                 icon: "Users",
-                title: "Опытная команда",
-                description: "Специалисты с опытом работы более 12 лет"
+                title: "Команда профессионалов",
+                description: "Юристы, экономисты и специалисты по закупкам в одной команде"
               },
               {
                 icon: "Zap",
                 title: "Быстрая реакция",
-                description: "Оперативное реагирование на новые тендеры 24/7"
+                description: "Оперативное реагирование на новые тендеры и изменения в законодательстве"
               }
             ].map((advantage, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-all group-hover:scale-110">
-                  <Icon name={advantage.icon} className="w-8 h-8 text-white" />
+                <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all shadow-lg shadow-amber-600/50">
+                  <Icon name={advantage.icon} className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{advantage.title}</h3>
-                <p className="text-blue-100 leading-relaxed">{advantage.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{advantage.title}</h3>
+                <p className="text-slate-400 leading-relaxed">{advantage.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="process" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      {/* Reviews Section */}
+      <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
-              <Icon name="GitBranch" className="w-4 h-4 mr-2" />
-              Процесс работы
+            <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
+              <Icon name="MessageSquare" className="w-4 h-4 mr-2" />
+              Отзывы клиентов
             </Badge>
-            <h2 className="text-4xl font-bold text-white mb-4">Как мы работаем</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Что говорят о нас</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Прозрачная схема сотрудничества на каждом этапе
+              Мнения наших клиентов — лучшая оценка нашей работы
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-            {[
-              {
-                step: "01",
-                title: "Консультация",
-                description: "Анализируем ваши потребности и возможности",
-                icon: "MessageSquare"
-              },
-              {
-                step: "02",
-                title: "Поиск тендеров",
-                description: "Находим подходящие тендеры на всех площадках",
-                icon: "Search"
-              },
-              {
-                step: "03",
-                title: "Подготовка заявки",
-                description: "Оформляем документы и готовим конкурентное предложение",
-                icon: "FileEdit"
-              },
-              {
-                step: "04",
-                title: "Победа и контракт",
-                description: "Сопровождаем до заключения контракта",
-                icon: "Trophy"
-              }
-            ].map((item, index) => (
-              <div key={index} className="relative group">
-                <div className="bg-slate-800/50 p-8 rounded-2xl border-2 border-slate-700 hover:border-blue-600 transition-all hover:shadow-xl">
-                  <div className="text-5xl font-bold text-slate-700 mb-4">{item.step}</div>
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Icon name={item.icon} className="w-6 h-6 text-white" />
+          {/* Reviews Display */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {reviews.map((review, index) => (
+              <Card key={index} className="border border-amber-600/30 bg-gradient-to-br from-slate-900 to-slate-800">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Icon key={i} name="Star" className="w-5 h-5 text-amber-500 fill-amber-500" />
+                    ))}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                  <p className="text-slate-300 leading-relaxed">{item.description}</p>
-                </div>
-              </div>
+                  <p className="text-slate-300 mb-6 leading-relaxed italic">"{review.text}"</p>
+                  <div className="border-t border-slate-700 pt-4">
+                    <div className="font-bold text-white">{review.name}</div>
+                    <div className="text-sm text-slate-400">{review.company}</div>
+                    <div className="text-xs text-slate-500 mt-1">{review.date}</div>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
+
+          {/* Review Form */}
+          <Card className="max-w-3xl mx-auto border border-amber-600/30 bg-gradient-to-br from-slate-900 to-slate-800">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Оставить отзыв</h3>
+              <form onSubmit={handleReviewSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-slate-300 mb-2">Ваше имя *</label>
+                  <Input 
+                    value={reviewForm.name}
+                    onChange={(e) => setReviewForm({...reviewForm, name: e.target.value})}
+                    className="bg-slate-800 border-slate-700 text-white"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 mb-2">Компания</label>
+                  <Input 
+                    value={reviewForm.company}
+                    onChange={(e) => setReviewForm({...reviewForm, company: e.target.value})}
+                    className="bg-slate-800 border-slate-700 text-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-slate-300 mb-2">Оценка</label>
+                  <div className="flex gap-2">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        type="button"
+                        onClick={() => setReviewForm({...reviewForm, rating: star})}
+                        className="focus:outline-none"
+                      >
+                        <Icon 
+                          name="Star" 
+                          className={`w-8 h-8 ${star <= reviewForm.rating ? 'text-amber-500 fill-amber-500' : 'text-slate-600'}`}
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-slate-300 mb-2">Ваш отзыв *</label>
+                  <Textarea 
+                    value={reviewForm.text}
+                    onChange={(e) => setReviewForm({...reviewForm, text: e.target.value})}
+                    className="bg-slate-800 border-slate-700 text-white min-h-[120px]"
+                    required
+                  />
+                </div>
+                <Button type="submit" className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg shadow-amber-600/30">
+                  <Icon name="Send" className="w-5 h-5 mr-2" />
+                  Отправить отзыв
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-slate-900 rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-800">
-            <div className="text-center mb-12">
-              <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl shadow-2xl p-8 md:p-12 border border-amber-600/30 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-600/20 rounded-full blur-3xl"></div>
+            
+            <div className="text-center mb-12 relative z-10">
+              <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
-                Связаться с нами
+                Свяжитесь с нами
               </Badge>
               <h2 className="text-4xl font-bold text-white mb-4">Получите бесплатную консультацию</h2>
               <p className="text-xl text-slate-300">
-                Обсудим ваши задачи и предложим оптимальное решение
+                Ответим на все вопросы и подберём оптимальное решение для вашего бизнеса
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 relative z-10">
               <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-slate-800 rounded-xl">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Phone" className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">Телефон</div>
-                    <a href="tel:+79991234567" className="text-blue-400 hover:text-blue-300">+7 (999) 123-45-67</a>
+                    <a href="tel:+79219876543" className="text-amber-400 hover:text-amber-300 text-lg">+7 (921) 987-65-43</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-slate-800 rounded-xl">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Mail" className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">Email</div>
-                    <a href="mailto:info@tenderpro.ru" className="text-blue-400 hover:text-blue-300">info@tenderpro.ru</a>
+                    <a href="mailto:info@tenderpro-spb.ru" className="text-amber-400 hover:text-amber-300">info@tenderpro-spb.ru</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-slate-800 rounded-xl">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="MapPin" className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">Адрес</div>
-                    <div className="text-slate-300">г. Москва, ул. Примерная, д. 1</div>
+                    <div className="text-slate-300">г. Санкт-Петербург</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Building2" className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white mb-1">ОГРНИП</div>
+                    <div className="text-slate-300 font-mono">323784700123456</div>
                   </div>
                 </div>
               </div>
 
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl">
-                  <h3 className="text-2xl font-bold mb-4">Работаем по всей России</h3>
-                  <p className="text-blue-100 mb-6 leading-relaxed">
-                    Оказываем услуги тендерного сопровождения для компаний во всех регионах РФ
-                  </p>
-                  <ul className="space-y-3">
-                    {[
-                      "44-ФЗ и 223-ФЗ",
-                      "Коммерческие тендеры",
-                      "Электронные аукционы",
-                      "Конкурсы и запросы котировок"
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <Icon name="CheckCircle" className="w-5 h-5 text-blue-200" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="bg-gradient-to-br from-amber-600/20 to-amber-800/20 backdrop-blur-sm border border-amber-500/30 text-white p-8 rounded-2xl">
+                  <h3 className="text-2xl font-bold mb-4 text-amber-400">Режим работы</h3>
+                  <div className="space-y-3 text-slate-300">
+                    <div className="flex justify-between pb-2 border-b border-amber-600/30">
+                      <span>Понедельник - Пятница</span>
+                      <span className="text-amber-400 font-semibold">9:00 - 18:00</span>
+                    </div>
+                    <div className="flex justify-between pb-2 border-b border-amber-600/30">
+                      <span>Суббота</span>
+                      <span className="text-amber-400 font-semibold">10:00 - 16:00</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Воскресенье</span>
+                      <span className="text-slate-500">Выходной</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8 pt-6 border-t border-amber-600/30">
+                    <h4 className="font-bold mb-3 text-amber-400">Работаем с:</h4>
+                    <ul className="space-y-2">
+                      {[
+                        "44-ФЗ (госзакупки)",
+                        "223-ФЗ (закупки отдельных видов юрлиц)",
+                        "Коммерческие тендеры",
+                        "Электронные торговые площадки"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2">
+                          <Icon name="CheckCircle" className="w-5 h-5 text-amber-500" />
+                          <span className="text-slate-300">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-10 text-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-12">
-                <Icon name="Send" className="w-5 h-5 mr-2" />
-                Отправить заявку
+            <div className="mt-10 text-center relative z-10">
+              <Button size="lg" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-lg px-12 shadow-xl shadow-amber-600/30">
+                <Icon name="MessageCircle" className="w-5 h-5 mr-2" />
+                Написать в WhatsApp
               </Button>
             </div>
           </div>
@@ -365,37 +472,41 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-slate-900 border-t border-amber-600/30 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                  <Icon name="FileCheck" className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
+                  <Icon name="Crown" className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-xl font-bold">ТендерПро</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерПро</span>
               </div>
-              <p className="text-slate-400 mb-4">
-                Профессиональное тендерное сопровождение для вашего бизнеса. Увеличиваем шансы на победу в государственных и коммерческих тендерах.
+              <p className="text-slate-400 mb-4 leading-relaxed">
+                Профессиональное тендерное сопровождение для вашего бизнеса. Полный цикл услуг от поиска тендеров до электронного актирования.
               </p>
+              <div className="text-sm text-slate-500">
+                <div>ОГРНИП: 323784700123456</div>
+                <div>ИНН: 784512345678</div>
+              </div>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">Услуги</h4>
+              <h4 className="font-bold text-white mb-4">Услуги</h4>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#services" className="hover:text-white transition-colors">Поиск тендеров</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Подготовка документов</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Правовое сопровождение</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Участие в торгах</a></li>
+                <li><a href="#services" className="hover:text-amber-400 transition-colors">Поиск тендеров</a></li>
+                <li><a href="#services" className="hover:text-amber-400 transition-colors">Техзадания</a></li>
+                <li><a href="#services" className="hover:text-amber-400 transition-colors">Электронное актирование</a></li>
+                <li><a href="#services" className="hover:text-amber-400 transition-colors">Правовое сопровождение</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-bold mb-4">Контакты</h4>
+              <h4 className="font-bold text-white mb-4">Контакты</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>+7 (999) 123-45-67</li>
-                <li>info@tenderpro.ru</li>
-                <li>г. Москва</li>
+                <li>+7 (921) 987-65-43</li>
+                <li>info@tenderpro-spb.ru</li>
+                <li>г. Санкт-Петербург</li>
               </ul>
             </div>
           </div>
