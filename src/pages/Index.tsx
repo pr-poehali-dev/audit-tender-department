@@ -69,11 +69,11 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Navigation */}
-      <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-amber-600/30">
+      <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-indigo-600/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
+              <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-600/50">
                 <svg className="w-8 h-8 text-white" viewBox="0 0 100 120" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="square" strokeLinejoin="miter">
                   <path d="M 20 110 L 50 10 L 80 110" fill="none" />
                   <path d="M 30 75 L 70 75" strokeWidth="4" />
@@ -83,18 +83,18 @@ export default function Index() {
                 </svg>
               </div>
               <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">ТендерМаркет</span>
                 <div className="text-xs text-slate-400">Премиальное тендерное сопровождение</div>
               </div>
             </div>
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Услуги</a>
-              <a href="#advantages" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Преимущества</a>
-              <a href="#reviews" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Отзывы</a>
-              <a href="#contact" className="text-slate-300 hover:text-amber-400 transition-colors font-medium">Контакты</a>
-              <Button className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg shadow-amber-600/50" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+              <a href="#services" className="text-slate-300 hover:text-indigo-400 transition-colors font-medium">Услуги</a>
+              <a href="#advantages" className="text-slate-300 hover:text-indigo-400 transition-colors font-medium">Преимущества</a>
+              <a href="#reviews" className="text-slate-300 hover:text-indigo-400 transition-colors font-medium">Отзывы</a>
+              <a href="#contact" className="text-slate-300 hover:text-indigo-400 transition-colors font-medium">Контакты</a>
+              <Button className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white shadow-lg shadow-indigo-600/50" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
                 Консультация
               </Button>
@@ -109,10 +109,10 @@ export default function Index() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden py-4 space-y-3">
-              <a href="#services" className="block text-slate-300 hover:text-amber-400 py-2">Услуги</a>
-              <a href="#advantages" className="block text-slate-300 hover:text-amber-400 py-2">Преимущества</a>
-              <a href="#reviews" className="block text-slate-300 hover:text-amber-400 py-2">Отзывы</a>
-              <a href="#contact" className="block text-slate-300 hover:text-amber-400 py-2">Контакты</a>
+              <a href="#services" className="block text-slate-300 hover:text-indigo-400 py-2">Услуги</a>
+              <a href="#advantages" className="block text-slate-300 hover:text-indigo-400 py-2">Преимущества</a>
+              <a href="#reviews" className="block text-slate-300 hover:text-indigo-400 py-2">Отзывы</a>
+              <a href="#contact" className="block text-slate-300 hover:text-indigo-400 py-2">Контакты</a>
             </div>
           )}
         </div>
@@ -120,12 +120,12 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-600/10 via-slate-950 to-slate-950"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-amber-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-slate-950 to-slate-950"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30">
+              <Badge className="bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 border border-indigo-500/30">
                 <Icon name="Award" className="w-4 h-4 mr-2" />
                 Премиальное тендерное сопровождение
               </Badge>
@@ -136,23 +136,23 @@ export default function Index() {
                 Комплексное сопровождение тендеров, электронное актирование, разработка технических заданий. Работаем на результат.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-lg shadow-xl shadow-amber-600/30" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white text-lg shadow-xl shadow-indigo-600/30" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                   <Icon name="Phone" className="w-5 h-5 mr-2" />
                   Получить консультацию
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-amber-500/50 text-amber-400 hover:bg-amber-950/50 text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" variant="outline" className="border-2 border-indigo-500/50 text-indigo-400 hover:bg-indigo-950/50 text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
                   Наши услуги
                 </Button>
               </div>
               
               {/* Stats */}
               <div className="grid grid-cols-2 gap-6 pt-8">
-                <div className="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-amber-600/20">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">12+ лет</div>
+                <div className="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-indigo-600/20">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">12+ лет</div>
                   <div className="text-sm text-slate-400 mt-2">Опыт работы на рынке</div>
                 </div>
-                <div className="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-amber-600/20">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Санкт-Петербург</div>
+                <div className="bg-slate-900/50 backdrop-blur-sm p-6 rounded-xl border border-indigo-600/20">
+                  <div className="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">Санкт-Петербург</div>
                   <div className="text-sm text-slate-400 mt-2">Работаем по всей России</div>
                 </div>
               </div>
@@ -167,7 +167,7 @@ export default function Index() {
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
+            <Badge className="bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 border border-indigo-500/30 mb-4">
               <Icon name="Briefcase" className="w-4 h-4 mr-2" />
               Наши услуги
             </Badge>
@@ -216,10 +216,10 @@ export default function Index() {
                 features: ["Стратегия ценообразования", "Онлайн-сопровождение", "Работа с ценовыми предложениями"]
               }
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-2xl transition-all duration-300 border border-amber-600/30 hover:border-amber-500 group bg-gradient-to-br from-slate-900 to-slate-800 backdrop-blur-sm overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Card key={index} className="hover:shadow-2xl transition-all duration-300 border border-indigo-600/30 hover:border-indigo-500 group bg-gradient-to-br from-slate-900 to-slate-800 backdrop-blur-sm overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <CardContent className="p-8 relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-amber-600/50">
+                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-indigo-600/50">
                     <Icon name={service.icon} className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
@@ -227,7 +227,7 @@ export default function Index() {
                   <ul className="space-y-3">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
-                        <Icon name="CheckCircle2" className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                        <Icon name="CheckCircle2" className="w-5 h-5 text-indigo-500 flex-shrink-0 mt-0.5" />
                         <span className="text-slate-400">{feature}</span>
                       </li>
                     ))}
@@ -241,10 +241,10 @@ export default function Index() {
 
       {/* Advantages Section */}
       <section id="advantages" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-600/10 via-transparent to-amber-600/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 via-transparent to-amber-600/10"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
+            <Badge className="bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 border border-indigo-500/30 mb-4">
               <Icon name="Star" className="w-4 h-4 mr-2" />
               Наши преимущества
             </Badge>
@@ -278,7 +278,7 @@ export default function Index() {
               }
             ].map((advantage, index) => (
               <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all shadow-lg shadow-amber-600/50">
+                <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all shadow-lg shadow-indigo-600/50">
                   <Icon name={advantage.icon} className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{advantage.title}</h3>
@@ -293,7 +293,7 @@ export default function Index() {
       <section id="reviews" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
+            <Badge className="bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 border border-indigo-500/30 mb-4">
               <Icon name="MessageSquare" className="w-4 h-4 mr-2" />
               Отзывы клиентов
             </Badge>
@@ -306,11 +306,11 @@ export default function Index() {
           {/* Reviews Display */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {reviews.map((review, index) => (
-              <Card key={index} className="border border-amber-600/30 bg-gradient-to-br from-slate-900 to-slate-800">
+              <Card key={index} className="border border-indigo-600/30 bg-gradient-to-br from-slate-900 to-slate-800">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" className="w-5 h-5 text-amber-500 fill-amber-500" />
+                      <Icon key={i} name="Star" className="w-5 h-5 text-indigo-500 fill-indigo-500" />
                     ))}
                   </div>
                   <p className="text-slate-300 mb-6 leading-relaxed italic">"{review.text}"</p>
@@ -325,7 +325,7 @@ export default function Index() {
           </div>
 
           {/* Review Form */}
-          <Card className="max-w-3xl mx-auto border border-amber-600/30 bg-gradient-to-br from-slate-900 to-slate-800">
+          <Card className="max-w-3xl mx-auto border border-indigo-600/30 bg-gradient-to-br from-slate-900 to-slate-800">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Оставить отзыв</h3>
               <form onSubmit={handleReviewSubmit} className="space-y-6">
@@ -358,7 +358,7 @@ export default function Index() {
                       >
                         <Icon 
                           name="Star" 
-                          className={`w-8 h-8 ${star <= reviewForm.rating ? 'text-amber-500 fill-amber-500' : 'text-slate-600'}`}
+                          className={`w-8 h-8 ${star <= reviewForm.rating ? 'text-indigo-500 fill-indigo-500' : 'text-slate-600'}`}
                         />
                       </button>
                     ))}
@@ -373,7 +373,7 @@ export default function Index() {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white shadow-lg shadow-amber-600/30">
+                <Button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white shadow-lg shadow-indigo-600/30">
                   <Icon name="Send" className="w-5 h-5 mr-2" />
                   Отправить отзыв
                 </Button>
@@ -386,11 +386,11 @@ export default function Index() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl shadow-2xl p-8 md:p-12 border border-amber-600/30 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-amber-600/20 rounded-full blur-3xl"></div>
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl shadow-2xl p-8 md:p-12 border border-indigo-600/30 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/20 rounded-full blur-3xl"></div>
             
             <div className="text-center mb-12 relative z-10">
-              <Badge className="bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 border border-amber-500/30 mb-4">
+              <Badge className="bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 border border-indigo-500/30 mb-4">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
                 Свяжитесь с нами
               </Badge>
@@ -402,28 +402,28 @@ export default function Index() {
 
             <div className="grid md:grid-cols-2 gap-8 relative z-10">
               <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-indigo-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Phone" className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">Телефон</div>
-                    <a href="tel:+79117090557" className="text-amber-400 hover:text-amber-300 text-lg">+7 (911) 709-05-57</a>
+                    <a href="tel:+79117090557" className="text-indigo-400 hover:text-indigo-300 text-lg">+7 (911) 709-05-57</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-indigo-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Mail" className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">Email</div>
-                    <a href="mailto:IPAvilovSP@yandex.ru" className="text-amber-400 hover:text-amber-300">IPAvilovSP@yandex.ru</a>
+                    <a href="mailto:IPAvilovSP@yandex.ru" className="text-indigo-400 hover:text-indigo-300">IPAvilovSP@yandex.ru</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-indigo-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="MapPin" className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -432,8 +432,8 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-amber-600/20">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-indigo-600/20">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Building2" className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -444,17 +444,17 @@ export default function Index() {
               </div>
 
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-amber-600/20 to-amber-800/20 backdrop-blur-sm border border-amber-500/30 text-white p-8 rounded-2xl">
-                  <h3 className="text-2xl font-bold mb-4 text-amber-400">Режим работы</h3>
+                <div className="bg-gradient-to-br from-indigo-600/20 to-indigo-800/20 backdrop-blur-sm border border-indigo-500/30 text-white p-8 rounded-2xl">
+                  <h3 className="text-2xl font-bold mb-4 text-indigo-400">Режим работы</h3>
                   <div className="space-y-3 text-slate-300">
                     <div className="flex justify-between pb-2">
                       <span>Ежедневно</span>
-                      <span className="text-amber-400 font-semibold">9:00 - 23:30</span>
+                      <span className="text-indigo-400 font-semibold">9:00 - 23:30</span>
                     </div>
                   </div>
                   
-                  <div className="mt-8 pt-6 border-t border-amber-600/30">
-                    <h4 className="font-bold mb-3 text-amber-400">Работаем с:</h4>
+                  <div className="mt-8 pt-6 border-t border-indigo-600/30">
+                    <h4 className="font-bold mb-3 text-indigo-400">Работаем с:</h4>
                     <ul className="space-y-2">
                       {[
                         "44-ФЗ (госзакупки)",
@@ -463,7 +463,7 @@ export default function Index() {
                         "Электронные торговые площадки"
                       ].map((item, i) => (
                         <li key={i} className="flex items-center gap-2">
-                          <Icon name="CheckCircle" className="w-5 h-5 text-amber-500" />
+                          <Icon name="CheckCircle" className="w-5 h-5 text-indigo-500" />
                           <span className="text-slate-300">{item}</span>
                         </li>
                       ))}
@@ -474,7 +474,7 @@ export default function Index() {
             </div>
 
             <div className="mt-10 text-center relative z-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-lg px-12 shadow-xl shadow-amber-600/30">
+              <Button size="lg" asChild className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white text-lg px-12 shadow-xl shadow-indigo-600/30">
                 <a href="tel:+79117090557">
                   <Icon name="Phone" className="w-5 h-5 mr-2" />
                   Позвонить сейчас
@@ -490,12 +490,12 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 border-t border-amber-600/30 py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-slate-900 border-t border-indigo-600/30 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
+                <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-lg flex items-center justify-center shadow-lg shadow-indigo-600/50">
                   <svg className="w-6 h-6 text-white" viewBox="0 0 100 120" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="square" strokeLinejoin="miter">
                     <path d="M 20 110 L 50 10 L 80 110" fill="none" />
                     <path d="M 30 75 L 70 75" strokeWidth="4" />
@@ -504,7 +504,7 @@ export default function Index() {
                     <path d="M 80 110 L 75 110 L 75 105" fill="none" strokeWidth="2" />
                   </svg>
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">ТендерМаркет</span>
               </div>
               <p className="text-slate-400 mb-4 leading-relaxed">
                 Профессиональное тендерное сопровождение для вашего бизнеса. Полный цикл услуг от поиска тендеров до электронного актирования.
@@ -517,10 +517,10 @@ export default function Index() {
             <div>
               <h4 className="font-bold text-white mb-4">Услуги</h4>
               <ul className="space-y-2 text-slate-400">
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Поиск тендеров</a></li>
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Техзадания</a></li>
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Электронное актирование</a></li>
-                <li><a href="#services" className="hover:text-amber-400 transition-colors">Правовое сопровождение</a></li>
+                <li><a href="#services" className="hover:text-indigo-400 transition-colors">Поиск тендеров</a></li>
+                <li><a href="#services" className="hover:text-indigo-400 transition-colors">Техзадания</a></li>
+                <li><a href="#services" className="hover:text-indigo-400 transition-colors">Электронное актирование</a></li>
+                <li><a href="#services" className="hover:text-indigo-400 transition-colors">Правовое сопровождение</a></li>
               </ul>
             </div>
             
