@@ -8,24 +8,24 @@ export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-slate-950">
       {/* Navigation */}
-      <nav className="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-blue-100">
+      <nav className="bg-slate-900/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
                 <Icon name="FileCheck" className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-slate-800">ТендерПро</span>
+              <span className="text-xl font-bold text-white">ТендерПро</span>
             </div>
             
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Услуги</a>
-              <a href="#advantages" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Преимущества</a>
-              <a href="#process" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Процесс</a>
-              <a href="#contact" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Контакты</a>
+              <a href="#services" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Услуги</a>
+              <a href="#advantages" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Преимущества</a>
+              <a href="#process" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Процесс</a>
+              <a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors font-medium">Контакты</a>
               <Button className="bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 Получить консультацию
               </Button>
@@ -33,17 +33,17 @@ export default function Index() {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <Icon name={isMenuOpen ? "X" : "Menu"} className="w-6 h-6 text-slate-800" />
+              <Icon name={isMenuOpen ? "X" : "Menu"} className="w-6 h-6 text-white" />
             </button>
           </div>
 
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden py-4 space-y-3">
-              <a href="#services" className="block text-slate-600 hover:text-blue-600 py-2">Услуги</a>
-              <a href="#advantages" className="block text-slate-600 hover:text-blue-600 py-2">Преимущества</a>
-              <a href="#process" className="block text-slate-600 hover:text-blue-600 py-2">Процесс</a>
-              <a href="#contact" className="block text-slate-600 hover:text-blue-600 py-2">Контакты</a>
+              <a href="#services" className="block text-slate-300 hover:text-blue-400 py-2">Услуги</a>
+              <a href="#advantages" className="block text-slate-300 hover:text-blue-400 py-2">Преимущества</a>
+              <a href="#process" className="block text-slate-300 hover:text-blue-400 py-2">Процесс</a>
+              <a href="#contact" className="block text-slate-300 hover:text-blue-400 py-2">Контакты</a>
             </div>
           )}
         </div>
@@ -58,10 +58,10 @@ export default function Index() {
                 <Icon name="Award" className="w-4 h-4 mr-2" />
                 Профессиональное тендерное сопровождение
               </Badge>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Победа в тендерах — наша специализация
               </h1>
-              <p className="text-xl text-slate-600 leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 Комплексное сопровождение на всех этапах тендерных процедур. Увеличим ваши шансы на победу до 85%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -69,7 +69,7 @@ export default function Index() {
                   <Icon name="Phone" className="w-5 h-5 mr-2" />
                   Бесплатная консультация
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                <Button size="lg" variant="outline" className="border-2 border-blue-400 text-blue-400 hover:bg-blue-950 text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
                   Узнать больше
                 </Button>
               </div>
@@ -78,15 +78,15 @@ export default function Index() {
               <div className="grid grid-cols-3 gap-6 pt-8">
                 <div>
                   <div className="text-3xl font-bold text-blue-600">500+</div>
-                  <div className="text-sm text-slate-600">Выигранных тендеров</div>
+                  <div className="text-sm text-slate-400">Выигранных тендеров</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-blue-600">85%</div>
-                  <div className="text-sm text-slate-600">Процент побед</div>
+                  <div className="text-sm text-slate-400">Процент побед</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-blue-600">12 лет</div>
-                  <div className="text-sm text-slate-600">На рынке</div>
+                  <div className="text-sm text-slate-400">На рынке</div>
                 </div>
               </div>
             </div>
@@ -104,15 +104,15 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
               <Icon name="Briefcase" className="w-4 h-4 mr-2" />
               Наши услуги
             </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Комплексное тендерное сопровождение</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Комплексное тендерное сопровождение</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Полный цикл работ от поиска тендеров до заключения контракта
             </p>
           </div>
@@ -156,18 +156,18 @@ export default function Index() {
                 features: ["Проверка договора", "Согласование условий", "Подписание контракта"]
               }
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-200 group">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 border-slate-800 hover:border-blue-600 group bg-slate-800/50">
                 <CardContent className="p-8">
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon name={service.icon} className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3">{service.title}</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-slate-300 mb-6 leading-relaxed">{service.description}</p>
                   <ul className="space-y-3">
                     {service.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <Icon name="Check" className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-700">{feature}</span>
+                        <span className="text-slate-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -228,15 +228,15 @@ export default function Index() {
       </section>
 
       {/* Process Section */}
-      <section id="process" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="process" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
               <Icon name="GitBranch" className="w-4 h-4 mr-2" />
               Процесс работы
             </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Как мы работаем</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Как мы работаем</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Прозрачная схема сотрудничества на каждом этапе
             </p>
           </div>
@@ -269,13 +269,13 @@ export default function Index() {
               }
             ].map((item, index) => (
               <div key={index} className="relative group">
-                <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-100 hover:border-blue-300 transition-all hover:shadow-xl">
-                  <div className="text-5xl font-bold text-blue-200 mb-4">{item.step}</div>
+                <div className="bg-slate-800/50 p-8 rounded-2xl border-2 border-slate-700 hover:border-blue-600 transition-all hover:shadow-xl">
+                  <div className="text-5xl font-bold text-slate-700 mb-4">{item.step}</div>
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <Icon name={item.icon} className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{item.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-slate-300 leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -284,49 +284,49 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+          <div className="bg-slate-900 rounded-3xl shadow-2xl p-8 md:p-12 border border-slate-800">
             <div className="text-center mb-12">
               <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
                 <Icon name="Phone" className="w-4 h-4 mr-2" />
                 Связаться с нами
               </Badge>
-              <h2 className="text-4xl font-bold text-slate-900 mb-4">Получите бесплатную консультацию</h2>
-              <p className="text-xl text-slate-600">
+              <h2 className="text-4xl font-bold text-white mb-4">Получите бесплатную консультацию</h2>
+              <p className="text-xl text-slate-300">
                 Обсудим ваши задачи и предложим оптимальное решение
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-blue-50 rounded-xl">
+                <div className="flex items-start gap-4 p-6 bg-slate-800 rounded-xl">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Phone" className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900 mb-1">Телефон</div>
-                    <a href="tel:+79991234567" className="text-blue-600 hover:text-blue-700">+7 (999) 123-45-67</a>
+                    <div className="font-semibold text-white mb-1">Телефон</div>
+                    <a href="tel:+79991234567" className="text-blue-400 hover:text-blue-300">+7 (999) 123-45-67</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-blue-50 rounded-xl">
+                <div className="flex items-start gap-4 p-6 bg-slate-800 rounded-xl">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="Mail" className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900 mb-1">Email</div>
-                    <a href="mailto:info@tenderpro.ru" className="text-blue-600 hover:text-blue-700">info@tenderpro.ru</a>
+                    <div className="font-semibold text-white mb-1">Email</div>
+                    <a href="mailto:info@tenderpro.ru" className="text-blue-400 hover:text-blue-300">info@tenderpro.ru</a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-blue-50 rounded-xl">
+                <div className="flex items-start gap-4 p-6 bg-slate-800 rounded-xl">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Icon name="MapPin" className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900 mb-1">Адрес</div>
-                    <div className="text-slate-600">г. Москва, ул. Примерная, д. 1</div>
+                    <div className="font-semibold text-white mb-1">Адрес</div>
+                    <div className="text-slate-300">г. Москва, ул. Примерная, д. 1</div>
                   </div>
                 </div>
               </div>
