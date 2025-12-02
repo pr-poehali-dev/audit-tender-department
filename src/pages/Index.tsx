@@ -473,8 +473,14 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="mt-10 text-center relative z-10">
-              <Button size="lg" className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-lg px-12 shadow-xl shadow-amber-600/30">
+            <div className="mt-10 text-center relative z-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-lg px-12 shadow-xl shadow-amber-600/30">
+                <a href="tel:+79117090557">
+                  <Icon name="Phone" className="w-5 h-5 mr-2" />
+                  Позвонить сейчас
+                </a>
+              </Button>
+              <Button size="lg" className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-lg px-12 shadow-xl shadow-green-600/30">
                 <Icon name="MessageCircle" className="w-5 h-5 mr-2" />
                 Написать в WhatsApp
               </Button>
