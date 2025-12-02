@@ -660,10 +660,15 @@ export default function Index() {
                   Желаем продуктивного развития и высоких достижений.
                 </p>
                 
-                <div className="pt-2 text-right">
+                <div className="pt-2 text-right flex flex-col items-end gap-2">
                   <p className="italic text-orange-400 font-semibold">
                     С уважением,<br />Авилов С.П.
                   </p>
+                  <img 
+                    src="https://cdn.poehali.dev/projects/327f0307-940f-4faf-939f-4c0060b93434/files/03ecb9bd-acae-4073-a36c-6952c6d7d358.jpg" 
+                    alt="Подпись Авилов С.П." 
+                    className="h-12 w-auto opacity-80"
+                  />
                 </div>
               </div>
             </div>
