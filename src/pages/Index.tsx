@@ -459,11 +459,12 @@ export default function Index() {
                       {[
                         "44-ФЗ (госзакупки)",
                         "223-ФЗ (закупки отдельных видов юрлиц)",
+                        "ЕОСЗ (Единый отраслевой Стандарт закупок Росатом)",
                         "Коммерческие тендеры",
                         "Электронные торговые площадки"
                       ].map((item, i) => (
-                        <li key={i} className="flex items-center gap-2">
-                          <Icon name="CheckCircle" className="w-5 h-5 text-orange-500" />
+                        <li key={i} className="flex items-start gap-2">
+                          <Icon name="CheckCircle" className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                           <span className="text-slate-300">{item}</span>
                         </li>
                       ))}
