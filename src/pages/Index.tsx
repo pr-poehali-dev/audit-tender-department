@@ -158,14 +158,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-700 rounded-3xl blur-3xl opacity-20"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop" 
-                alt="Тендерное сопровождение" 
-                className="relative rounded-2xl shadow-2xl w-full border border-amber-600/20"
-              />
-            </div>
+
           </div>
         </div>
       </section>
