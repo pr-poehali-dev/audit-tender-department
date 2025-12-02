@@ -448,8 +448,8 @@ export default function Index() {
                   <h3 className="text-2xl font-bold mb-4 text-orange-400">Режим работы</h3>
                   <div className="space-y-3 text-slate-300">
                     <div className="flex justify-between pb-2">
-                      <span>Ежедневно</span>
-                      <span className="text-orange-400 font-semibold">9:00 - 23:30</span>
+                      <span>Круглосуточно</span>
+                      <span className="text-orange-400 font-semibold text-2xl">24/7</span>
                     </div>
                   </div>
                   
