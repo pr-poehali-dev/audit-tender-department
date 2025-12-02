@@ -542,6 +542,18 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/79117090557?text=Здравствуйте!%20Интересует%20тендерное%20сопровождение"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full shadow-2xl shadow-green-600/50 flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+        aria-label="Написать в WhatsApp"
+      >
+        <Icon name="MessageCircle" className="w-8 h-8 text-white" />
+        <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse"></span>
+      </a>
     </div>
   );
 }
