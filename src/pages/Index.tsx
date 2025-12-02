@@ -1,733 +1,407 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
-
-import TenderSpecialistsReviews from "@/components/TenderSpecialistsReviews";
+import { useState } from "react";
 
 export default function Index() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-premium-dark animate-fade-in">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Navigation */}
-      <nav className="bg-premium-gray/95 backdrop-blur-md premium-shadow border-b border-gold/20 sticky top-0 z-50">
+      <nav className="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <img 
-                src="/img/3288d581-fe6d-4184-94a4-5fd9b20dcf73.jpg" 
-                alt="Tender Audit Heraldry" 
-                className="h-8 w-8 mr-3 object-contain" 
-              />
-              <span className="text-xl font-semibold text-gold">Inc AVILOV TENDER AUDIT</span>
-            </div>
-            <div className="hidden md:block">
-              <div className="flex items-baseline space-x-4">
-                <a href="#home" className="text-gold font-medium">Главная</a>
-                <a href="#services" className="text-gray-300 hover:text-gold transition-colors">Услуги</a>
-                <a href="#audit" className="text-gray-300 hover:text-gold transition-colors">Аудит</a>
-                <a href="#about" className="text-gray-300 hover:text-gold transition-colors">О нас</a>
-                <a href="#contact" className="text-gray-300 hover:text-gold transition-colors">Контакты</a>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                <Icon name="FileCheck" className="w-6 h-6 text-white" />
               </div>
+              <span className="text-xl font-bold text-slate-800">ТендерПро</span>
             </div>
+            
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8">
+              <a href="#services" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Услуги</a>
+              <a href="#advantages" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Преимущества</a>
+              <a href="#process" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Процесс</a>
+              <a href="#contact" className="text-slate-600 hover:text-blue-600 transition-colors font-medium">Контакты</a>
+              <Button className="bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                Получить консультацию
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <Icon name={isMenuOpen ? "X" : "Menu"} className="w-6 h-6 text-slate-800" />
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 space-y-3">
+              <a href="#services" className="block text-slate-600 hover:text-blue-600 py-2">Услуги</a>
+              <a href="#advantages" className="block text-slate-600 hover:text-blue-600 py-2">Преимущества</a>
+              <a href="#process" className="block text-slate-600 hover:text-blue-600 py-2">Процесс</a>
+              <a href="#contact" className="block text-slate-600 hover:text-blue-600 py-2">Контакты</a>
+            </div>
+          )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="py-8 sm:py-12 md:py-16 lg:py-24 px-3 sm:px-4 lg:px-8 premium-dark-gradient relative overflow-hidden min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
-          <div className="hidden sm:block absolute top-20 left-1/4 w-32 h-32 bg-gold/20 rounded-full blur-xl animate-float"></div>
-          <div className="hidden sm:block absolute top-40 right-1/3 w-24 h-24 bg-gold/30 rounded-full blur-lg animate-float" style={{animationDelay: '2s'}}></div>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white mb-4 sm:mb-6 md:mb-8 animate-slide-up drop-shadow-2xl leading-tight px-2 sm:px-0">
-            Профессиональный аудит
-            <span className="text-white block font-display drop-shadow-lg">тендерного отдела</span>
-          </h1>
-          <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white/95 mb-6 sm:mb-8 md:mb-10 lg:mb-12 max-w-4xl mx-auto animate-slide-up drop-shadow-lg font-medium px-4 sm:px-2 md:px-0 leading-relaxed" style={{animationDelay: '0.2s'}}>
-Получите эксклюзивный аудит тендерного отдела от эксперта-практика. Увеличьте прибыль на 40-60% уже через 3 месяца!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-slide-up px-4 sm:px-2 md:px-0" style={{animationDelay: '0.4s'}}>
-            <Button size="lg" className="gold-gradient hover:scale-110 text-black font-bold text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 premium-shadow w-full sm:w-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Icon name="FileText" className="mr-2 h-5 w-5" />
-ПОЛУЧИТЬ ПРЕМИАЛЬНЫЙ АУДИТ
-            </Button>
-            <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 backdrop-blur-sm w-full sm:w-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Icon name="Phone" className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
-              Консультация
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder Section */}
-      <section className="py-16 bg-premium-accent relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/3">
-              <div className="relative group">
-                {/* Premium Golden Frame */}
-                <div className="absolute -inset-4 gold-gradient rounded-3xl blur-sm opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
-                <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 rounded-2xl blur-[1px] opacity-20"></div>
-                
-                {/* Main Image */}
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold/20 via-gold/10 to-gold/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
-                  <div className="relative bg-gradient-to-br from-premium-dark via-black to-premium-gray p-1 rounded-2xl shadow-glow border border-gold/50 group-hover:border-gold/80 transition-all duration-700">
-                    <img
-                      src="https://cdn.poehali.dev/files/1ab43665-1c59-4ca0-932c-ae07ec0892a5.jpg"
-                      alt="Станислав Авилов"
-                      className="w-56 h-56 sm:w-64 sm:h-64 md:w-56 md:h-56 mx-auto object-scale-down rounded-xl shadow-2xl hover:scale-105 transition-all duration-700 filter brightness-125 contrast-125 saturate-110 group-hover:brightness-150"
-                    />
-                    {/* Dramatic lighting effect */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-gold/5 to-gold/20 rounded-xl pointer-events-none group-hover:from-gold/10 group-hover:to-gold/30 transition-all duration-700"></div>
-                    {/* Premium border glow */}
-                    <div className="absolute -inset-1 bg-gradient-to-r from-gold/30 via-transparent to-gold/30 rounded-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-700 -z-10 blur-sm"></div>
-                  </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100">
+                <Icon name="Award" className="w-4 h-4 mr-2" />
+                Профессиональное тендерное сопровождение
+              </Badge>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                Победа в тендерах — наша специализация
+              </h1>
+              <p className="text-xl text-slate-600 leading-relaxed">
+                Комплексное сопровождение на всех этапах тендерных процедур. Увеличим ваши шансы на победу до 85%.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                  <Icon name="Phone" className="w-5 h-5 mr-2" />
+                  Бесплатная консультация
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Узнать больше
+                </Button>
+              </div>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-8">
+                <div>
+                  <div className="text-3xl font-bold text-blue-600">500+</div>
+                  <div className="text-sm text-slate-600">Выигранных тендеров</div>
                 </div>
-                
-                {/* Floating Elements */}
-                <div className="absolute -top-6 -left-6 w-12 h-12 gold-gradient rounded-full opacity-20 animate-float blur-sm"></div>
-                <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-30 animate-float blur-sm" style={{animationDelay: '2s'}}></div>
+                <div>
+                  <div className="text-3xl font-bold text-blue-600">85%</div>
+                  <div className="text-sm text-slate-600">Процент побед</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-blue-600">12 лет</div>
+                  <div className="text-sm text-slate-600">На рынке</div>
+                </div>
               </div>
             </div>
-            <div className="lg:w-2/3 animate-slide-up">
-              <h2 className="text-white mb-6 font-thin text-xl">
-                Станислав Авилов
-              </h2>
-              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                Основатель проекта, Эксперт с многолетним опытом управления тендерным отделом со стороны Поставщика
-              </p>
-              <blockquote className="text-lg text-gray-300 italic leading-relaxed mb-8 border-l-4 border-gray-600 pl-6 bg-gray-800/30 backdrop-blur-sm rounded-r-lg p-6 border border-gray-700/30">
-                "Государственные закупки — это не просто процедуры и документы. Это инструмент развития экономики, 
-                создания справедливой конкуренции и эффективного использования бюджетных средств. За каждой тендерной 
-                процедурой стоят люди, их потребности и будущее нашего общества. 
-                
-                Моя миссия — помочь организациям построить прозрачную и эффективную систему закупок, которая служит 
-                общественным интересам и способствует устойчивому развитию бизнеса."
-              </blockquote>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gold-gradient hover:scale-105 text-black font-bold shadow-glow hover:shadow-xl transition-all duration-300" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                  <Icon name="Calendar" className="mr-2 h-5 w-5" />
-                  Записаться на консультацию
-                </Button>
 
-              </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-3xl blur-3xl opacity-20"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" 
+                alt="Тендерное сопровождение" 
+                className="relative rounded-2xl shadow-2xl w-full"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-premium-dark relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-display font-bold text-white mb-6">ЭКСКЛЮЗИВНЫЕ УСЛУГИ</h2>
-            <p className="text-xl text-gray-100 max-w-3xl mx-auto font-medium">
-              Премиальные решения для максимизации прибыли от тендерных процедур
+            <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
+              <Icon name="Briefcase" className="w-4 h-4 mr-2" />
+              Наши услуги
+            </Badge>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Комплексное тендерное сопровождение</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Полный цикл работ от поиска тендеров до заключения контракта
             </p>
-            <div className="w-24 h-1 gold-gradient mx-auto mt-6"></div>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-premium-gray border-gold/20 shadow-lg hover:shadow-xl transition-shadow premium-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Search" className="h-6 w-6 text-gold" />
-                </div>
-                <CardTitle className="text-white">Анализ процессов</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Детальное изучение существующих процедур подготовки и подачи тендерных документов
-                </CardDescription>
-              </CardHeader>
-            </Card>
 
-            <Card className="bg-premium-gray border-gold/20 shadow-lg hover:shadow-xl transition-shadow premium-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Shield" className="h-6 w-6 text-gold" />
-                </div>
-                <CardTitle className="text-white">Контроль качества</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Оценка системы контроля качества документооборота и соблюдения регламентов
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="bg-premium-gray border-gold/20 shadow-lg hover:shadow-xl transition-shadow premium-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gold/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="TrendingUp" className="h-6 w-6 text-gold" />
-                </div>
-                <CardTitle className="text-white">Оптимизация</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Разработка рекомендаций по улучшению эффективности тендерных процессов
-                </CardDescription>
-              </CardHeader>
-            </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "Search",
+                title: "Поиск тендеров",
+                description: "Мониторинг и отбор тендеров по вашим критериям на всех площадках",
+                features: ["Автоматизированный поиск", "Анализ конкурентов", "Оценка перспективности"]
+              },
+              {
+                icon: "FileText",
+                title: "Подготовка документов",
+                description: "Профессиональная подготовка заявок и необходимой документации",
+                features: ["Проверка требований", "Оформление заявки", "Юридическая экспертиза"]
+              },
+              {
+                icon: "Shield",
+                title: "Правовое сопровождение",
+                description: "Защита ваших интересов на всех этапах тендерной процедуры",
+                features: ["Консультации юристов", "Обжалование решений", "Досудебное урегулирование"]
+              },
+              {
+                icon: "TrendingUp",
+                title: "Финансовый анализ",
+                description: "Расчет коммерческого предложения и оптимизация ценообразования",
+                features: ["Анализ себестоимости", "Конкурентное ценообразование", "Расчет рентабельности"]
+              },
+              {
+                icon: "CheckCircle",
+                title: "Участие в торгах",
+                description: "Представление ваших интересов в электронных и очных торгах",
+                features: ["Стратегия торгов", "Онлайн-сопровождение", "Ценовые предложения"]
+              },
+              {
+                icon: "FileCheck",
+                title: "Заключение контракта",
+                description: "Полное сопровождение процесса заключения государственного контракта",
+                features: ["Проверка договора", "Согласование условий", "Подписание контракта"]
+              }
+            ].map((service, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-200 group">
+                <CardContent className="p-8">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <Icon name={service.icon} className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">{service.title}</h3>
+                  <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <Icon name="Check" className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Performance Recommendations Section */}
-      <section className="py-16 bg-premium-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Рекомендации по увеличению производительности
-            </h2>
-            <p className="text-gray-100 max-w-3xl mx-auto">
-              Проверенные методы оптимизации работы тендерного отдела для повышения эффективности на 40-60%
+      {/* Advantages Section */}
+      <section id="advantages" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-blue-500 text-white hover:bg-blue-500 mb-4">
+              <Icon name="Star" className="w-4 h-4 mr-2" />
+              Почему выбирают нас
+            </Badge>
+            <h2 className="text-4xl font-bold mb-4">Ваши преимущества при работе с нами</h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              Профессиональный подход и многолетний опыт гарантируют результат
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Left Column - Process Optimization */}
-            <div className="space-y-6">
-              <Card className="bg-premium-gray border-gold/20 premium-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
-                      <Icon name="Zap" className="h-5 w-5 text-gold" />
-                    </div>
-                    <CardTitle className="text-lg text-white">Автоматизация процессов</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Внедрение системы управления документами (DMS)</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Автоматизация создания типовых документов</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Интеграция с электронными торговыми площадками</span>
-                  </div>
-                  <div className="p-3 bg-gold/10 rounded-lg border border-gold/20">
-                    <div className="text-sm font-medium text-gold">Результат: сокращение времени на 45%</div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-premium-gray border-gold/20 premium-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
-                      <Icon name="Users" className="h-5 w-5 text-gold" />
-                    </div>
-                    <CardTitle className="text-lg text-white">Развитие персонала</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Обучение современным методам работы с тендерами</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Сертификация по управлению закупками</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Внедрение системы мотивации и KPI</span>
-                  </div>
-                  <div className="p-3 bg-gold/10 rounded-lg border border-gold/20">
-                    <div className="text-sm font-medium text-gold">Результат: повышение квалификации на 35%</div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Right Column - Strategic Optimization */}
-            <div className="space-y-6">
-              <Card className="bg-premium-gray border-gold/20 premium-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
-                      <Icon name="Target" className="h-5 w-5 text-gold" />
-                    </div>
-                    <CardTitle className="text-lg text-white">Стратегическое планирование</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Создание базы данных потенциальных тендеров</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Анализ конкурентов и рыночных трендов</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Разработка долгосрочной стратегии участия</span>
-                  </div>
-                  <div className="p-3 bg-gold/10 rounded-lg border border-gold/20">
-                    <div className="text-sm font-medium text-gold">Результат: увеличение выигрышей на 25%</div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-premium-gray border-gold/20 premium-shadow">
-                <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
-                      <Icon name="BarChart3" className="h-5 w-5 text-gold" />
-                    </div>
-                    <CardTitle className="text-lg text-white">Контроль и аналитика</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Внедрение системы отчетности и мониторинга</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Анализ эффективности участия в тендерах</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Icon name="CheckCircle2" className="h-4 w-4 text-green-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">Оптимизация бюджета на участие в закупках</span>
-                  </div>
-                  <div className="p-3 bg-gold/10 rounded-lg border border-gold/20">
-                    <div className="text-sm font-medium text-gold">Результат: ROI увеличивается на 40%</div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Performance Metrics */}
-          <div className="mt-12 rounded-xl p-8 premium-shadow bg-premium-gray border border-gold/20">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
-              Ключевые показатели эффективности после оптимизации
-            </h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Clock" className="h-8 w-8 text-gold" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: "Target",
+                title: "Высокий процент побед",
+                description: "85% выигранных тендеров благодаря профессиональному подходу"
+              },
+              {
+                icon: "Clock",
+                title: "Экономия времени",
+                description: "Освободите ресурсы компании для основной деятельности"
+              },
+              {
+                icon: "Users",
+                title: "Опытная команда",
+                description: "Специалисты с опытом работы более 12 лет"
+              },
+              {
+                icon: "Zap",
+                title: "Быстрая реакция",
+                description: "Оперативное реагирование на новые тендеры 24/7"
+              }
+            ].map((advantage, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-all group-hover:scale-110">
+                  <Icon name={advantage.icon} className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gold mb-2">-45%</div>
-                <div className="text-gray-300">Время подготовки документов</div>
+                <h3 className="text-xl font-bold mb-3">{advantage.title}</h3>
+                <p className="text-blue-100 leading-relaxed">{advantage.description}</p>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="Trophy" className="h-8 w-8 text-gold" />
-                </div>
-                <div className="text-3xl font-bold text-gold mb-2">+25%</div>
-                <div className="text-gray-300">Выигранных тендеров</div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="DollarSign" className="h-8 w-8 text-gold" />
-                </div>
-                <div className="text-3xl font-bold text-gold mb-2">+40%</div>
-                <div className="text-gray-300">ROI от участия</div>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name="CheckCircle" className="h-8 w-8 text-gold" />
-                </div>
-                <div className="text-3xl font-bold text-gold mb-2">95%</div>
-                <div className="text-gray-300">Качество документов</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Risk Detection Section */}
-      <section className="py-16 bg-premium-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Выявление рисков и нарушений
-            </h2>
-            <p className="text-gray-100 max-w-3xl mx-auto">
-              Комплексный анализ для выявления недобросовестных сотрудников и фактов упущенной выгоды
+      {/* Process Section */}
+      <section id="process" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
+              <Icon name="GitBranch" className="w-4 h-4 mr-2" />
+              Процесс работы
+            </Badge>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Как мы работаем</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Прозрачная схема сотрудничества на каждом этапе
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {/* Staff Misconduct Detection */}
-            <Card className="bg-premium-gray border-red-500/30 premium-shadow">
-              <CardHeader className="bg-gradient-to-r from-red-900/20 to-red-800/20 rounded-t-lg border-b border-red-500/20">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center">
-                    <Icon name="AlertTriangle" className="h-6 w-6 text-red-400" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {[
+              {
+                step: "01",
+                title: "Консультация",
+                description: "Анализируем ваши потребности и возможности",
+                icon: "MessageSquare"
+              },
+              {
+                step: "02",
+                title: "Поиск тендеров",
+                description: "Находим подходящие тендеры на всех площадках",
+                icon: "Search"
+              },
+              {
+                step: "03",
+                title: "Подготовка заявки",
+                description: "Оформляем документы и готовим конкурентное предложение",
+                icon: "FileEdit"
+              },
+              {
+                step: "04",
+                title: "Победа и контракт",
+                description: "Сопровождаем до заключения контракта",
+                icon: "Trophy"
+              }
+            ].map((item, index) => (
+              <div key={index} className="relative group">
+                <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border-2 border-blue-100 hover:border-blue-300 transition-all hover:shadow-xl">
+                  <div className="text-5xl font-bold text-blue-200 mb-4">{item.step}</div>
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <Icon name={item.icon} className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl text-white">
-                    Выявление недобросовестных сотрудников
-                  </CardTitle>
-                </div>
-                <CardDescription className="text-gray-300">
-                  Системный анализ действий персонала для выявления нарушений и злоупотреблений
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-6 space-y-6">
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-white mb-3">Методы выявления:</h4>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Eye" className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Анализ временных паттернов</div>
-                      <div className="text-gray-300 text-sm">Выявление аномальных задержек в подаче заявок</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Icon name="FileX" className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Контроль качества документов</div>
-                      <div className="text-gray-300 text-sm">Выявление преднамеренных ошибок и упущений</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Network" className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Анализ связей с поставщиками</div>
-                      <div className="text-gray-300 text-sm">Выявление конфликта интересов и сговора</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Activity" className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Мониторинг активности</div>
-                      <div className="text-gray-300 text-sm">Отслеживание подозрительного поведения в системах</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-4 bg-red-900/20 rounded-lg border border-red-500/20">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Icon name="Shield" className="h-4 w-4 text-red-400" />
-                    <span className="font-medium text-red-300">Результат проверки</span>
-                  </div>
-                  <div className="text-sm text-red-300">
-                    Выявление нарушений в 87% случаев проведенных аудитов
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Lost Profit Analysis */}
-            <Card className="bg-premium-gray border-yellow-500/30 premium-shadow">
-              <CardHeader className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 rounded-t-lg border-b border-yellow-500/20">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                    <Icon name="TrendingDown" className="h-6 w-6 text-yellow-400" />
-                  </div>
-                  <CardTitle className="text-xl text-white">
-                    Анализ упущенной выгоды
-                  </CardTitle>
-                </div>
-                <CardDescription className="text-gray-300">
-                  Выявление потенциальных возможностей и оценка финансовых потерь компании
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-6 space-y-6">
-                <div className="space-y-4">
-                  <h4 className="font-semibold text-white mb-3">Области анализа:</h4>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Calendar" className="h-4 w-4 text-yellow-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Пропущенные тендеры</div>
-                      <div className="text-gray-300 text-sm">Анализ неучастия в подходящих закупках</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Calculator" className="h-4 w-4 text-yellow-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Неоптимальное ценообразование</div>
-                      <div className="text-gray-300 text-sm">Выявление завышенных или заниженных ставок</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Clock" className="h-4 w-4 text-yellow-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Несвоевременная подача</div>
-                      <div className="text-gray-300 text-sm">Потери от опоздания с документами</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-3">
-                    <Icon name="Target" className="h-4 w-4 text-yellow-500 mt-1 flex-shrink-0" />
-                    <div>
-                      <div className="font-medium text-white text-sm">Неэффективная стратегия</div>
-                      <div className="text-gray-300 text-sm">Анализ выбора неперспективных направлений</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-4 bg-yellow-900/20 rounded-lg border border-yellow-500/20">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Icon name="DollarSign" className="h-4 w-4 text-yellow-400" />
-                    <span className="font-medium text-yellow-300">Средняя упущенная выгода</span>
-                  </div>
-                  <div className="text-sm text-yellow-300">
-                    15-30% от общего оборота тендерного отдела
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Investigation Process */}
-          <div className="rounded-xl p-8 bg-premium-gray border border-gold/20 premium-shadow">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">
-              Процесс проведения расследования
-            </h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-gold">1</span>
-                </div>
-                <h4 className="font-semibold text-white mb-2">Сбор данных</h4>
-                <p className="text-gray-300 text-sm">Анализ документооборота за последние 2 года</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-gold">2</span>
-                </div>
-                <h4 className="font-semibold text-white mb-2">Анализ паттернов</h4>
-                <p className="text-gray-300 text-sm">Выявление аномалий и подозрительных действий</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-gold">3</span>
-                </div>
-                <h4 className="font-semibold text-white mb-2">Расчет ущерба</h4>
-                <p className="text-gray-300 text-sm">Оценка финансовых потерь от выявленных нарушений</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-gold">4</span>
-                </div>
-                <h4 className="font-semibold text-white mb-2">Рекомендации</h4>
-                <p className="text-gray-300 text-sm">Предложения по устранению проблем</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Audit Section */}
-      <section id="audit" className="py-16 bg-premium-accent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Аудит системы управления</h2>
-            <p className="text-gray-100 max-w-2xl mx-auto">
-              Анализ системы управления тендерным отделом с фокусом на ключевые аспекты
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-black text-sm font-semibold">1</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Структура документооборота
-                    </h3>
-                    <p className="text-gray-300">
-                      Анализ организации хранения, обработки и передачи тендерной документации
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-black text-sm font-semibold">2</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Процедуры контроля
-                    </h3>
-                    <p className="text-gray-300">
-                      Оценка механизмов верификации и валидации тендерных заявок
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-black text-sm font-semibold">3</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      Автоматизация процессов
-                    </h3>
-                    <p className="text-gray-300">
-                      Анализ уровня цифровизации и возможностей для внедрения IT-решений
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 leading-relaxed">{item.description}</p>
                 </div>
               </div>
-            </div>
-
-            <div className="bg-premium-gray p-8 rounded-lg premium-shadow border border-gold/20">
-              <h3 className="text-xl font-semibold text-white mb-6">Ключевые показатели</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Время обработки заявок</span>
-                  <Badge variant="secondary" className="bg-gold/20 text-gold border-gold/30">-30%</Badge>
-                </div>
-                <div className="w-full bg-premium-dark rounded-full h-2">
-                  <div className="bg-gold h-2 rounded-full w-[70%]"></div>
-                </div>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Качество документации</span>
-                  <Badge variant="secondary" className="bg-gold/20 text-gold border-gold/30">+45%</Badge>
-                </div>
-                <div className="w-full bg-premium-dark rounded-full h-2">
-                  <div className="bg-gold h-2 rounded-full w-[85%]"></div>
-                </div>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Соответствие регламентам</span>
-                  <Badge variant="secondary" className="bg-gold/20 text-gold border-gold/30">+60%</Badge>
-                </div>
-                <div className="w-full bg-premium-dark rounded-full h-2">
-                  <div className="bg-gold h-2 rounded-full w-[90%]"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tender Specialists Reviews */}
-      <TenderSpecialistsReviews />
-
-      {/* About Section */}
-      <section id="about" className="py-16 bg-premium-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">О компании</h2>
-              <p className="text-gray-300 mb-6">
-                Мы специализируемся на проведении комплексного аудита тендерных отделов 
-                поставщиков. Наша команда экспертов имеет многолетний опыт работы в сфере 
-                государственных и коммерческих закупок.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gold mb-2">150+</div>
-                  <div className="text-gray-400">Проведено аудитов</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gold mb-2">12</div>
-                  <div className="text-gray-400">Лет опыта</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-premium-gray p-8 rounded-lg premium-shadow border border-gold/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Наши преимущества</h3>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Индивидуальный подход к каждому клиенту</span>
-                </li>
-                <li className="flex items-center">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Глубокая экспертиза в области закупок</span>
-                </li>
-                <li className="flex items-center">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Практические рекомендации по оптимизации</span>
-                </li>
-                <li className="flex items-center">
-                  <Icon name="CheckCircle" className="h-5 w-5 text-gold mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Постаудиторское сопровождение</span>
-                </li>
-              </ul>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Свяжитесь с нами</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Готовы начать аудит Вашего тендерного отдела? Свяжитесь с нами для получения консультации
-            </p>
-          </div>
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+            <div className="text-center mb-12">
+              <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-100 mb-4">
+                <Icon name="Phone" className="w-4 h-4 mr-2" />
+                Связаться с нами
+              </Badge>
+              <h2 className="text-4xl font-bold text-slate-900 mb-4">Получите бесплатную консультацию</h2>
+              <p className="text-xl text-slate-600">
+                Обсудим ваши задачи и предложим оптимальное решение
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gray-800 border-gray-700">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Phone" className="h-6 w-6 text-primary" />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 p-6 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Phone" className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-slate-900 mb-1">Телефон</div>
+                    <a href="tel:+79991234567" className="text-blue-600 hover:text-blue-700">+7 (999) 123-45-67</a>
+                  </div>
                 </div>
-                <CardTitle className="text-white">Телефон</CardTitle>
-                <CardDescription className="text-gray-300">
-                  <a href="tel:+79117090557" className="hover:text-primary transition-colors">
-                    +7 (911) 709-05-57
-                  </a>
-                </CardDescription>
-              </CardHeader>
-            </Card>
 
-            <Card className="bg-gray-800 border-gray-700">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="Mail" className="h-6 w-6 text-primary" />
+                <div className="flex items-start gap-4 p-6 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="Mail" className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-slate-900 mb-1">Email</div>
+                    <a href="mailto:info@tenderpro.ru" className="text-blue-600 hover:text-blue-700">info@tenderpro.ru</a>
+                  </div>
                 </div>
-                <CardTitle className="text-white">Email</CardTitle>
-                <CardDescription className="text-gray-300">ipavilovsp@yandex.ru</CardDescription>
-              </CardHeader>
-            </Card>
 
-            <Card className="bg-gray-800 border-gray-700">
-              <CardHeader>
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <Icon name="MapPin" className="h-6 w-6 text-primary" />
+                <div className="flex items-start gap-4 p-6 bg-blue-50 rounded-xl">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Icon name="MapPin" className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-slate-900 mb-1">Адрес</div>
+                    <div className="text-slate-600">г. Москва, ул. Примерная, д. 1</div>
+                  </div>
                 </div>
-                <CardTitle className="text-white">Адрес</CardTitle>
-                <CardDescription className="text-gray-300">г. Санкт-Петербург</CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
+              </div>
 
-          <div className="text-center mt-12">
-            <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              <Icon name="MessageCircle" className="mr-2 h-5 w-5" />
-              Получить консультацию
-            </Button>
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl">
+                  <h3 className="text-2xl font-bold mb-4">Работаем по всей России</h3>
+                  <p className="text-blue-100 mb-6 leading-relaxed">
+                    Оказываем услуги тендерного сопровождения для компаний во всех регионах РФ
+                  </p>
+                  <ul className="space-y-3">
+                    {[
+                      "44-ФЗ и 223-ФЗ",
+                      "Коммерческие тендеры",
+                      "Электронные аукционы",
+                      "Конкурсы и запросы котировок"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <Icon name="CheckCircle" className="w-5 h-5 text-blue-200" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 text-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-12">
+                <Icon name="Send" className="w-5 h-5 mr-2" />
+                Отправить заявку
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center mb-4 md:mb-0">
-              <img 
-                src="/img/3288d581-fe6d-4184-94a4-5fd9b20dcf73.jpg" 
-                alt="Tender Audit Heraldry" 
-                className="h-6 w-6 mr-2 object-contain" 
-              />
-              <span className="text-white font-semibold">TenderAudit</span>
+      <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div className="col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                  <Icon name="FileCheck" className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-xl font-bold">ТендерПро</span>
+              </div>
+              <p className="text-slate-400 mb-4">
+                Профессиональное тендерное сопровождение для вашего бизнеса. Увеличиваем шансы на победу в государственных и коммерческих тендерах.
+              </p>
             </div>
-            <div className="text-gray-400 text-sm">© ИП Авилов С.П.
-ОГРНИП324784700271894
- Все права защищены.</div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Услуги</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li><a href="#services" className="hover:text-white transition-colors">Поиск тендеров</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Подготовка документов</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Правовое сопровождение</a></li>
+                <li><a href="#services" className="hover:text-white transition-colors">Участие в торгах</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Контакты</h4>
+              <ul className="space-y-2 text-slate-400">
+                <li>+7 (999) 123-45-67</li>
+                <li>info@tenderpro.ru</li>
+                <li>г. Москва</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
+            <p>&copy; 2024 ТендерПро. Все права защищены.</p>
           </div>
         </div>
       </footer>
