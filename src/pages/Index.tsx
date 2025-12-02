@@ -12,24 +12,45 @@ export default function Index() {
   const [reviews, setReviews] = useState([
     {
       name: "Михаил Сергеев",
-      company: "ООО 'СтройТех'",
+      company: "",
       text: "Благодаря профессионализму команды мы выиграли государственный контракт на 15 млн рублей. Особенно хочу отметить качество подготовки технической документации.",
       rating: 5,
       date: "15.11.2024"
     },
     {
       name: "Елена Николаева",
-      company: "ИП Николаева Е.В.",
+      company: "",
       text: "Сопровождение на всех этапах было безупречным. Помогли разобраться с электронным актированием, что сэкономило массу времени.",
       rating: 5,
       date: "08.11.2024"
     },
     {
       name: "Александр Петров",
-      company: "ООО 'ТехСнаб'",
+      company: "",
       text: "Отличная работа с техническими заданиями. Специалисты учли все нюансы нашей отрасли и подготовили грамотное описание объекта закупки.",
       rating: 5,
       date: "02.11.2024"
+    },
+    {
+      name: "Дмитрий Волков",
+      company: "",
+      text: "Профессиональный подход к каждому тендеру. Помогли выиграть сложный аукцион, где конкуренция была очень высокой. Рекомендую!",
+      rating: 5,
+      date: "28.10.2024"
+    },
+    {
+      name: "Ольга Смирнова",
+      company: "",
+      text: "Отличное юридическое сопровождение. Помогли обжаловать неправомерные действия заказчика, и мы получили контракт. Спасибо!",
+      rating: 5,
+      date: "20.10.2024"
+    },
+    {
+      name: "Игорь Федоров",
+      company: "",
+      text: "Работаю с этой компанией уже второй год. Всегда оперативно реагируют на новые тендеры и качественно готовят документацию.",
+      rating: 5,
+      date: "12.10.2024"
     }
   ]);
 
@@ -56,7 +77,7 @@ export default function Index() {
                 <Icon name="Crown" className="w-7 h-7 text-white" />
               </div>
               <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерПро</span>
+                <span className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
                 <div className="text-xs text-slate-400">Премиальное тендерное сопровождение</div>
               </div>
             </div>
@@ -296,7 +317,7 @@ export default function Index() {
                   <p className="text-slate-300 mb-6 leading-relaxed italic">"{review.text}"</p>
                   <div className="border-t border-slate-700 pt-4">
                     <div className="font-bold text-white">{review.name}</div>
-                    <div className="text-sm text-slate-400">{review.company}</div>
+                    {review.company && <div className="text-sm text-slate-400">{review.company}</div>}
                     <div className="text-xs text-slate-500 mt-1">{review.date}</div>
                   </div>
                 </CardContent>
@@ -388,7 +409,7 @@ export default function Index() {
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">Телефон</div>
-                    <a href="tel:+79219876543" className="text-amber-400 hover:text-amber-300 text-lg">+7 (921) 987-65-43</a>
+                    <a href="tel:+79117090557" className="text-amber-400 hover:text-amber-300 text-lg">+7 (911) 709-05-57</a>
                   </div>
                 </div>
 
@@ -398,7 +419,7 @@ export default function Index() {
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">Email</div>
-                    <a href="mailto:info@tenderpro-spb.ru" className="text-amber-400 hover:text-amber-300">info@tenderpro-spb.ru</a>
+                    <a href="mailto:IPAvilovSP@yandex.ru" className="text-amber-400 hover:text-amber-300">IPAvilovSP@yandex.ru</a>
                   </div>
                 </div>
 
@@ -418,7 +439,7 @@ export default function Index() {
                   </div>
                   <div>
                     <div className="font-semibold text-white mb-1">ОГРНИП</div>
-                    <div className="text-slate-300 font-mono">323784700123456</div>
+                    <div className="text-slate-300 font-mono">324784700271894</div>
                   </div>
                 </div>
               </div>
@@ -480,14 +501,13 @@ export default function Index() {
                 <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center shadow-lg shadow-amber-600/50">
                   <Icon name="Crown" className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерПро</span>
+                <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">ТендерМаркет</span>
               </div>
               <p className="text-slate-400 mb-4 leading-relaxed">
                 Профессиональное тендерное сопровождение для вашего бизнеса. Полный цикл услуг от поиска тендеров до электронного актирования.
               </p>
               <div className="text-sm text-slate-500">
-                <div>ОГРНИП: 323784700123456</div>
-                <div>ИНН: 784512345678</div>
+                <div>ОГРНИП: 324784700271894</div>
               </div>
             </div>
             
@@ -504,15 +524,15 @@ export default function Index() {
             <div>
               <h4 className="font-bold text-white mb-4">Контакты</h4>
               <ul className="space-y-2 text-slate-400">
-                <li>+7 (921) 987-65-43</li>
-                <li>info@tenderpro-spb.ru</li>
+                <li>+7 (911) 709-05-57</li>
+                <li>IPAvilovSP@yandex.ru</li>
                 <li>г. Санкт-Петербург</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
-            <p>&copy; 2024 ТендерПро. Все права защищены.</p>
+            <p>&copy; 2024 ИП Авилов С.П. Все права защищены.</p>
           </div>
         </div>
       </footer>
